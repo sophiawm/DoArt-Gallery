@@ -1,15 +1,15 @@
 import express from "express";
 import cors from 'cors'
 import db from "./server/database/db.js"
-import artistRouter from './routes/artistRouter.js'
-import productRouter from './routes/productRouter.js'
-import adminRouter from "./routes/adminRouter.js"
-import customerRouter from "./routes/customerRouter.js"
-import orderRouter from "./routes/orderRouter.js"
+import artistRouter from "./server/routes/artistRouter.js";
+import productRouter from "./server/routes/productRouter.js";
+import adminRouter from "./server/routes/adminRouter.js";
+import customerRouter from "./server/routes/customerRouter.js"
+import orderRouter from "./server/routes/orderRouter.js"
 
 export const app = express()
 app.get('/', (_req, res) =>{
-    res.send('Hello Seller of Local Wares')
+    res.send('Hello Seller of Wild and Wonderful Art')
 })
 
 app.use(cors())
