@@ -22,7 +22,7 @@ CREATE TABLE products (
     product_description VARCHAR(500) NOT NULL,
     category VARCHAR(50),
     price FLOAT NOT NULL,
-    stock FLOAT
+    stock FLOAT,
     createAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updateAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
@@ -51,7 +51,7 @@ CREATE TABLE customers (
     user_name varchar(50) UNIQUE NOT NULL,
     user_email varchar(50) UNIQUE NOT NULL,
     user_password varchar(50) NOT NULL,
-    address varchar(500) NOT NULL);
+    user_address varchar(500) NOT NULL);
 
 select * from customers;
 INSERT into customers(user_name, user_email, user_password, address)
@@ -64,9 +64,9 @@ CREATE TABLE orders(
 	products	varchar(500) NOT NULL,
 	quantity	integer NOT NULL,
 	price	FLOAT NOT NULL,
-    	order_status varchar(50) NOT NULL,
+    order_status varchar(50) NOT NULL,
 	createAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    	updateAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP);
+    updateAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP);
     
     ALTER TABLE `orders` ADD FOREIGN KEY (`products`) REFERENCES `products` (`product_name`),
 	ADD FOREIGN KEY (`customer`) REFERENCES `customers` (`user_name`) ON DELETE SET NULL;
