@@ -1,4 +1,4 @@
-import ArtistModel from '../models/ArtistModel.js';
+import ArtistModel from '../models/ArtistModel.js .';
 
     //POST - CREATE OF CRUD
 export const createArtist = async (req, res) => {
@@ -22,7 +22,7 @@ export const getAllArtists = async (_req, res) => {
 };
 
     //PUT - UPDATE OF CRUD
-export const updateartist = async (req, res) => {
+export const updateArtist = async (req, res) => {
     try {
         const artist = await ArtistModel.findByPk(req.params.id);
         if (!artist) {
