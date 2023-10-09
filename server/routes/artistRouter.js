@@ -1,5 +1,8 @@
 import express from "express";
-import { getAllArtists , createArtist , updateArtist , deleteArtist } from "../controllers/artistController.js";
+import { getAllArtists} from "../controllers/artistController.js"; 
+import {createArtist } from "../controllers/artistController.js";
+import { updateArtist } from "../controllers/artistController.js"; 
+import{deleteArtist} from "../controllers/artistController.js";
 
 const artistRouter = express.Router();
 

@@ -1,4 +1,4 @@
-import ArtistModel from '../models/ArtistModel.js .';
+import ArtistModel from '../models/ArtistModel.js';
 
     //POST - CREATE OF CRUD
 export const createArtist = async (req, res) => {
