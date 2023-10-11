@@ -13,7 +13,7 @@ insert into artists(artist_name, products, categories)
 VALUES ("Julie Balsaux", "Enfaces 2", "Cubism, Watercolor"),
 	("Erik Bonnet", "Stagman", "Painting, Drawing, Anthropomorphisim");
 
-
+ALTER TABLE `artists` MODIFY id CHAR(36);
 
 CREATE TABLE products (
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
@@ -28,11 +28,14 @@ CREATE TABLE products (
 );
 
 ALTER TABLE `products` ADD FOREIGN KEY (`artist_id`) REFERENCES `artists` (`id`) ON DELETE CASCADE;
+ALTER TABLE `products` MODIFY id CHAR(36);
 
 select * from products;
 insert into products(product_name, artist_id, product_description, category, price, stock)
 VALUES ("Stagman", 2, "Oil painting: an anthropomorphic deer figure", "Oil on Canvas", 1500.00, 1),
 	("Enfaces 2", 1, "A haunting take on childhood", "WaterColor, Cubism", 1310.00 , 1);
+
+
 
 CREATE TABLE admins (
     id int AUTO_INCREMENT PRIMARY KEY,
@@ -46,6 +49,8 @@ INSERT into admins(user_name, user_email, user_password , roles)
 VALUES ("curator", "curator@mail.com", "iknowart" , "head curator"),
 	("manager", "management@mail.com", "onmywall" , "gallery manager");
 
+ALTER TABLE `admins` MODIFY id CHAR(36);
+
 CREATE TABLE customers (
     id int AUTO_INCREMENT PRIMARY KEY,
     user_name varchar(50) UNIQUE NOT NULL,
@@ -56,7 +61,9 @@ CREATE TABLE customers (
 select * from customers;
 INSERT into customers(user_name, user_email, user_password, address)
 VALUES ("joBob", "LoveArt@mail.com", "goblidygoo", "111 Artway Dr"),
-	    ("janesArt", "jane@mail.com", "greenArt1", "234 AguaVida");
+	("janesArt", "jane@mail.com", "greenArt1", "234 AguaVida");
+
+ALTER TABLE `customers` MODIFY id CHAR(36);
 
 CREATE TABLE orders(
 	id	integer AUTO_INCREMENT PRIMARY KEY,
@@ -75,3 +82,5 @@ select * from orders;
 INSERT into orders(customer, products, quantity, price, order_status)
 VALUES("joBob", "Stagman", 1 , 1500.00 , "processing"),
 	("janesArt", "Enfaces 2", 1 , 1500.00, "shipped");
+
+ALTER TABLE `orders` MODIFY id CHAR(36);
