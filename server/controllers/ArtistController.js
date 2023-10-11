@@ -21,6 +21,20 @@ export const getAllArtists = async (_req, res) => {
     }
 };
 
+//GET ONE ARTIST - REVIEW OF CRUD
+export const getArtist = async (req, res) => {
+    try {
+        const artist = await ArtistModel.findByPk(req.params.id);
+        if (!artist) {
+            return res.status(500).json({ message: 'Artist not found' });
+        }
+        await ArtistModel.update(req.body, {where: {id:req.params.id}} );
+        res.status(201).json({ message: 'The Artist has been found successfully!', artist });
+    } catch (error) {console.error(error);
+        res.status(500).json({ message: error.message });
+    }
+};
+
     //PUT - UPDATE OF CRUD
 export const updateArtist = async (req, res) => {
     try {
@@ -29,7 +43,7 @@ export const updateArtist = async (req, res) => {
             return res.status(500).json({ message: 'artist not found' });
         }
         await ArtistModel.update(req.body, {where: {id:req.params.id}} );
-        res.status(201).json({ message: 'The artist information has been updated successfully!' });
+        res.status(201).json({ message: 'The artist information has been updated successfully!', artist });
     } catch (error) {console.error(error);
         res.status(500).json({ message: error.message });
     }
@@ -40,7 +54,7 @@ export const deleteArtist = async (req, res) => {
     try {
         const artist = await ArtistModel.findByPk(req.params.id);
         if (!artist) {
-            return res.status(500).json({ message: 'artist not found' });
+            return res.status(500).json({ message: 'Artist not found' });
         }
         await ArtistModel.destroy({where: {id:req.params.id}} );
         res.status(203).json({ message: 'The artist has been deleted successfully!' });

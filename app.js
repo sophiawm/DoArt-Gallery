@@ -27,7 +27,7 @@ try{
 		console.log(`error:' ${error}`)
 	}
 
-//👀 importante este paso para poder parar el servidor dentro de los test
-export const server = app.listen(0,() =>{
+
+export const server = app.listen(8080,() =>{
 console.log('Listening on port:', server.address().port)
 } )

@@ -21,8 +21,21 @@ export const createOrder = async (req, res) => {
     }catch (error){
         res.status(500).json({message: "Order could not be submitted, please be sure to complete all fields."})
     }
-}
+};
 
+//GET ONE ORDER - REVIEW OF CRUD
+export const getOrder = async (req, res) => {
+    try {
+        const order = await OrderModel.findByPk(req.params.id);
+        if (!order) {
+            return res.status(500).json({ message: 'Order not found' });
+        }
+        await OrderModel.update(req.body, {where: {id:req.params.id}} );
+        res.status(201).json({ message: 'The Order has been found successfully!', order });
+    } catch (error) {console.error(error);
+        res.status(500).json({ message: error.message });
+    }
+};
 
 //PUT - UPDATE OF CRUD
 
