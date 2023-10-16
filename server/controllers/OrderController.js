@@ -17,6 +17,10 @@ export const getAllOrders = async (_req, res) => {
 export const createOrder = async (req, res) => {
     try{
         await OrderModel.create(req.body)
+        const product = await ProductModel.findByPk(req.params.id)
+        if (!product) {
+            return res.status(500).json({ message: 'Product not found' });
+        }
         res.status(200).json({message: "This order has been submitted successfully!"})
     }catch (error){
         res.status(500).json({message: "Order could not be submitted, please be sure to complete all fields."})

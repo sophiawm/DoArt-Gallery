@@ -1,6 +1,8 @@
 import db from '../database/db.js';
 import { DataTypes } from 'sequelize';
 import { UUIDV4 } from 'sequelize';
+import ProductModel from './ProductModel.js';
+
 
 
 const ArtistModel = db.define("artists", {
@@ -14,6 +16,11 @@ const ArtistModel = db.define("artists", {
     categories:{type:DataTypes.STRING},
 },{
     timestamps: false
+})
+
+
+ProductModel.belongsTo(ArtistModel, {
+    foreignKey: "artist_id", as:"artist"
 })
 
 export default ArtistModel;

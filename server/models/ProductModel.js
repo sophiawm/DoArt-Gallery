@@ -1,6 +1,7 @@
 import db from '../database/db.js';
 import { DataTypes , UUIDV4 } from 'sequelize';
 
+
 const ProductModel = db.define("products", {
     id: {
         type: DataTypes.UUID,
@@ -15,5 +16,8 @@ const ProductModel = db.define("products", {
 },{
     timestamps: false
 })
+OO
+
+
 
 export default ProductModel;

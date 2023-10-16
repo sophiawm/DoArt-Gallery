@@ -1,4 +1,5 @@
 import ArtistModel from '../models/ArtistModel.js';
+import ProductModel from '../models/ProductModel.js';
 
     //POST - CREATE OF CRUD
 export const createArtist = async (req, res) => {
@@ -35,6 +36,18 @@ export const getArtist = async (req, res) => {
     }
 };
 
+    //GET ONE ARTIST'S PRODUCTS 
+export const getArtistProducts = async(req, res) =>{
+    const {id} = req.params
+    try{
+        const artist = await ProductModel.findAll ({ where: {artist_id:id}})
+        res.json(artist);
+    } catch (error) {
+        return res.status(500).json ({message: error.errors});
+    }
+    }
+
+
     //PUT - UPDATE OF CRUD
 export const updateArtist = async (req, res) => {
     try {
@@ -62,3 +75,4 @@ export const deleteArtist = async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 };
+

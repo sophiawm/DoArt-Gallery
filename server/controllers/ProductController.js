@@ -1,4 +1,5 @@
 import ProductModel from '../models/ProductModel.js';
+import ArtistModel from '../models/ArtistModel.js';
 
 // GET - REVIEW OF CRUD
 
@@ -17,6 +18,10 @@ export const getAllProducts = async (_req, res) => {
 export const createProduct = async (req, res) => {
     try{
         await ProductModel.create(req.body)
+        const artist = await ArtistModel.findByPk(req.params.id)
+        if (!artist) {
+            return res.status(500).json({ message: 'Artist not found' });
+        }
         res.status(200).json({message: "This product has been added successfully!", product})
     }catch (error){
         res.status(500).json({message: "Product could not be added, please be sure to complete all fields."})
@@ -36,6 +41,17 @@ export const getProduct = async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 };
+
+    //GET All SOLD PRODUCTS 
+export const getSoldProducts = async(req, res) =>{
+        const {id} = req.params
+        try{
+            const soldProducts = await OrderModel.findAll ({ where: {product_id:id}})
+            res.json(soldProducts);
+        } catch (error) {
+            return res.status(500).json ({message: error.errors});
+        }
+        };
 
 //PUT - UPDATE OF CRUD
 
