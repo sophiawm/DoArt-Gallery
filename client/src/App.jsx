@@ -16,6 +16,8 @@ import UserOrder from './components/pages/user-order/user-order'
 import Register from './components/pages/user-register/register'
 import Orders from './components/pages/orders/orders'
 import Pay from './components/templates/pay/user-cart'
+import Header from './components/templates/header/header'
+import Footer from './components/templates/footer/footer'
 
 
 
