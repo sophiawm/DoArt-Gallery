@@ -1,10 +1,16 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Footer from './componentes/templates/Footer/footer.jsx'; 
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+const App = () => {
+  // Tu contenido principal aquí
+  return (
+    <div>
+      <h1>Tu aplicación principal</h1>
+      {/*  */}
+      <Footer />
+    </div>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById('root'));
