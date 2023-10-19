@@ -1,39 +1,44 @@
-import { } from 'react';
-import ButtonSmall from '../../atoms/buttons/button-small';
-import InputText from '../../atoms/inputs/input-text/input-text';
-import StyledLoginUser from './styled-login-user';
+import {} from "react";
+import ButtonSmall from "../../atoms/buttons/button-small";
+import Footer from "../../templates/footer-user/footer";
+import Header from "../../templates/header-user/header";
+import StyledLoginUser from "./styled-login-user";
 
+const LoginUser = () => {
+  return (
+    <StyledLoginUser>
+      <Header />
+      <section className="form">
+        <h1 className="form__title">Start your collection with us!</h1>
 
-const LoginUser =()=>{
-    return(
-        <StyledLoginUser>
-            <header></header>
-            <section className='form'> 
-                <h1 className='form__title'>Start your <br /> collection <br /> with us!</h1>
-
-                <form action="" className='form__container'>
-
-                    <div className='form__container--inputs'> 
-                    
-
-
-                    <InputText title={"EMAIL"} gap={"0.3"} type={'text'} />
-
-                    <InputText title={"PASSWORD"} gap={"0.3"} type={'password'} />
-
-                    
-                    </div>
-
-                    <div className='form__container--buttons'>
-                    <ButtonSmall text={'LOGIN'} color={'black'} width={'15rem'} />
-                    <ButtonSmall text={'REGISTER'} color={'black'} width={'15rem'}/>
-                    </div>
-                </form>
-            </section>
-            <footer></footer>
+        <form action="" className="form__container">
       
-        </StyledLoginUser>
-    )
-}
+            <div className="form__container--inputs">
+              <label htmlFor="form__input-email">
+                EMAIL
+                <div className="form__container--input">
+                  <input type="email" id="form__input-email" />
+                </div>
+              </label>
+
+              <label htmlFor="form__input-password">
+                PASSWORD
+                <div className="form__container--input">
+                  <input type="password" id="form__input-password" />
+                </div>
+              </label>
+              
+          </div>
+
+          <div className="form__container--buttons">
+            <ButtonSmall text={"LOGIN"} color={"black"} width={"15rem"} />
+            <ButtonSmall text={"REGISTER"} color={"black"} width={"15rem"} />
+          </div>
+        </form>
+      </section>
+      <Footer />
+    </StyledLoginUser>
+  );
+};
 
 export default LoginUser;

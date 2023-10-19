@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import StyledCarousel from './styledCarousel';
 import img from './imgCarousel';
+import { dataDoArt } from "../../../data";
 
 export const Carousel = () => {
   const listRef = useRef();
@@ -28,15 +29,6 @@ export const Carousel = () => {
     }
   };
 
-//   useEffect(() => {
-//     const intervalId = setInterval(() => {
-//       scrollToImage('next');
-//     }, 5000);
-
-//     return () => {
-//       clearInterval(intervalId);
-//     };
-//   }, []); 
   
   const styleCarousel = {
     width: '390px',
@@ -47,7 +39,7 @@ export const Carousel = () => {
 
   return (
     <StyledCarousel>
-      <div className="main-container">
+      <div className="carousel">
         <div className="slider-container">
           <div className='leftArrow' onClick={() => { scrollToImage('prev') }}>&#10092;</div>
           <div className='rightArrow' onClick={() => { scrollToImage('next') }}>&#10093;</div>
@@ -66,6 +58,26 @@ export const Carousel = () => {
           </div>
         </div>
       </div>
+
+      {/* desktop version */}
+
+      <div className="carousel-desktop">
+        <ul className='carusels__container'>
+          {dataDoArt.map((a)=>{
+            return <li key={a.artist} className='carousel__container'>
+              <div className='carousel__img-container'>
+                <img src={a.imgArtist} alt="img-artist" className='carousel__img' />
+              </div>
+              <p className='carousel__artist'>{a.artist}</p>
+              <p className='carousel__typeArt'>{a.typeArt}</p>
+              <p className='carousel__biography'>{a.biography}</p>
+              <button className='carousel__button'>SEE MORE</button>
+            </li>
+          })}
+        </ul>
+        <div className=''>
+        </div>
+       </div>
     </StyledCarousel>
   );
 };

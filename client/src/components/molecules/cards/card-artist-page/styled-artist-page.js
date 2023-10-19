@@ -10,7 +10,7 @@ const StyledCardArtistPage = styled.div `
         justify-content: center;
         align-items: center;
         text-align: center;
-        gap: 1rem;
+        gap: 2rem;
     }
 
     .artist__image-container{
@@ -52,6 +52,44 @@ const StyledCardArtistPage = styled.div `
 
     .bold{
         font-weight: 500;
+    }
+
+    @media screen and (min-width: 391px){
+        .card-artist-page{
+            height: 100%;
+            width: 100vw;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            gap: 1rem;   
+        }
+
+        .artist__image-container{
+            grid-column: 1;
+            grid-row: 1/span 5;
+            display: flex;
+            align-self: center;
+            margin:0 auto;
+            width: 15rem;
+            height: 15rem;
+            border-radius: 35%;
+        }
+
+        .artist__image{
+            width: 15rem;
+            height: 15rem;
+        }
+
+        .artist__name,.artist__type,.artist__biography,.artist__categories{
+            grid-column: 2;
+            text-align: start;
+        }
+
+        .artist__biography{
+            width: 90%;
+        }
+
+
     }
 
 

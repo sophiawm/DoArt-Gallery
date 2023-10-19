@@ -71,6 +71,15 @@ const StyledCardOrder = styled.div`
         height: 100%;
         width: 100%;
     }
+
+    @media screen and (min-width: 391px){
+        .card{
+            width: 65%;
+            height: 100%;
+            margin: 0 auto;
+        }
+    }
+
 `
 
 export default StyledCardOrder;

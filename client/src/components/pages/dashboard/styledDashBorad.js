@@ -3,12 +3,6 @@ import styled from 'styled-components';
 
 const StyledDashboard = styled.div `
 
-    footer,header{
-        height: 10vh;
-        width: 100vw;
-        background-color: red;
-    }
-
     .dashboard {
         min-height: 80vh;
         max-height: 100%;
@@ -16,17 +10,18 @@ const StyledDashboard = styled.div `
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 1rem;
+        gap: 4rem;
         margin: 1rem auto;
     }
 
-    .search__container{
-        width: 100vw;
+    .search__container-mobile{
+        width: 95vw;
         height: auto;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 1rem;
+        margin: 0 auto;
     }
 
     #search__input{
@@ -182,12 +177,19 @@ const StyledDashboard = styled.div `
         margin-top: 3rem;
         margin-bottom: 3rem;
         height: 3rem;
-        width: 15rem;
+        width: 11rem;
         background-color: black;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         color: white;
         border-radius: 3rem;
     }
+
+    @media screen and (min-width: 391px){
+
+    .search__container-mobile{
+        display: none;
+    }
+}
 `
 
 export default StyledDashboard;

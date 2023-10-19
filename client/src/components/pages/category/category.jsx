@@ -1,6 +1,8 @@
 import {} from "react";
 import { dataDoArt } from "../../../data";
 import CardProducts from "../../molecules/cards/card-products/card-products";
+import Footer from "../../templates/footer-user/footer";
+import Header from "../../templates/header-user/header";
 
 import StyledCategory from "./styled-category";
 
@@ -18,7 +20,7 @@ const Category = () => {
 
   return (
     <StyledCategory>
-      <header></header>
+      <Header />
       <section className="category">
         <h1 className="category__title">MIXED-MEDIA</h1>
 
@@ -38,7 +40,7 @@ const Category = () => {
   
           <CardProducts map={find} />
 
-        <footer></footer>
+        <Footer />
       </section>
     </StyledCategory>
   );

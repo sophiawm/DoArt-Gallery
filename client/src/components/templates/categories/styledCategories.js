@@ -46,6 +46,35 @@ const StyledCategories = styled.div `
     border: none;
 }
 
+@media screen and (min-width: 391px){
+    .categories__container{
+        height: auto;
+        width: 100vw;
+        padding: 1rem;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        margin: 0 auto;
+        border-radius: 1rem;
+        row-gap: 1.5rem;
+    }
+
+    .categories__title{
+        grid-column: 1/span 3;
+        height: 3rem;
+        width: 16rem;
+    }
+
+    .categories__button {
+        width: 12rem;
+    }
+
+ 
+}
+
 
 `
 

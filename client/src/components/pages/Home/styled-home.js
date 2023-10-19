@@ -3,18 +3,6 @@ import styled from 'styled-components';
 
 const StyledHome = styled.main `
 
-header {
-    height: 15vh;
-    width: 100vw;
-    background-color: blue;
-}
-
-footer {
-    height: 15vh;
-    width: 100vw;
-    background-color: blue;
-}
-
 .home{
     height: auto;
     width: 100%;
@@ -43,6 +31,7 @@ footer {
         color: white;
         font-size: 2rem;
         text-align: center;
+        width: 70%;
     }
 
     .image__text{
@@ -96,6 +85,18 @@ footer {
 
 .categories{
     &__section{
+
+    }
+}
+@media screen and (min-width: 391px){
+    .carousel__title{
+        font-size: 2rem;
+        margin: 2rem auto;
+        font-weight: 400;
+    }
+
+    .main__title{
+        width: 100%;
 
     }
 }

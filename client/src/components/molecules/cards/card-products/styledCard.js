@@ -68,6 +68,23 @@ const StyledCard = styled.div`
     justify-self: start;
   }
 
+  @media screen and (min-width: 391px){
+    .cards__container {
+      height: 100%;
+      width: 95%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+      grid-template-rows: auto;
+      justify-items: center;
+      align-items: center;
+      background-color: #fffcfc;
+      gap: 2rem;
+      list-style: none;
+      box-sizing: border-box;
+      margin: 0 auto;
+    }
+  }
+
 `
 
 export default StyledCard;

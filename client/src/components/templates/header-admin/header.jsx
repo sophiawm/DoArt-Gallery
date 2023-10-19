@@ -1,48 +1,52 @@
-import React from 'react';
 import { useRef } from 'react';
-import StyledHeader from './styled-header';
+import StyledHeaderAdmin from './styled-header';
 
-const Header = () => {
+
+
+const HeaderAdmin = () => {
   let switchDropdown = true;
+  let switchCategories = true;
 
   const containerDropdownRef = useRef(null);
   const containerCategories = useRef(null);
+ 
 
-  //desplegable
+  
   const change = () => {
     if (switchDropdown) {
       containerDropdownRef.current.style.cssText = 'display: flex';
-    } 
-  };
-
-
-  // quitar dezplegable
-  const changeNot = () => {
-    if (switchDropdown) {
-      containerDropdownRef.current.style.cssText = 'display: none';
-      if (switchCategories === false) {
-        containerCategories.current.style.cssText='display:none';
+      if (!switchCategories) {
+        containerCategories.current.style.cssText = 'display:none';
       }
     } 
   };
 
 
-//desplegable de categorias
-  let switchCategories = true;
 
-  const categoriesList =()=>{
+
+  const changeNot = () => {
+    if (switchDropdown) {
+      containerDropdownRef.current.style.cssText = 'display: none';
+      if (!switchCategories) {
+        containerCategories.current.style.cssText = 'display:none';
+      }
+    } 
+  };
+
+
+
+  const categoriesList = () => {
     if (switchCategories) {
-        containerCategories.current.style.cssText='display: flex';
-    }else{
-        containerCategories.current.style.cssText='display:none';
+      containerCategories.current.style.cssText = 'display: flex';
+    } else {
+      containerCategories.current.style.cssText = 'display:none';
     }
-    switchCategories = !switchCategories
-  }
-
+    switchCategories = !switchCategories;
+  };
 
 
   return (
-    <StyledHeader>
+    <StyledHeaderAdmin>
       <header className='header'>
         <div className='logo-container' >
           <img src="src/assets/pages/logo-DoArt.svg" alt="logo" />
@@ -76,8 +80,41 @@ const Header = () => {
           <img src="src/assets/pages/dropdown-logo.svg" alt="dropdown-image" className='dropdown__image' />
         </div>
       </div>
-    </StyledHeader>
+
+
+      {/* version desktop */}
+      <header className='header-desktop'>
+      <img src="src/assets/pages/logo-DoArt.svg" alt="logo" className='header__logo'/>
+
+        <div className='header__container'>
+          
+          <p className='header__about-us'>Dashboard</p>
+
+          <p className='header__my-profile'>Orders</p>
+
+        
+
+
+        <div className="search__container">
+          <label htmlFor="search__input">
+            <input
+              type="text"
+              placeholder="Search for product..."
+              id="search__input"
+            />
+          </label>
+
+          <label htmlFor="search__button" className="search__button--container">
+            <input type="button" id="search__button" />
+          </label>
+
+        </div>
+        </div>
+      </header>
+
+
+    </StyledHeaderAdmin>
   );
 };
 
-export default Header;
+export default HeaderAdmin;

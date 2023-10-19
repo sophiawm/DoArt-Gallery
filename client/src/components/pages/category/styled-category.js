@@ -2,13 +2,6 @@ import styled from 'styled-components';
 
 
 const StyledCategory = styled.div `
-
-    footer,header{
-        height: 10vh;
-        width: 100vw;
-        background-color: red;
-    }
-
     .category {
         min-height: 80vh;
         max-height: 100%;

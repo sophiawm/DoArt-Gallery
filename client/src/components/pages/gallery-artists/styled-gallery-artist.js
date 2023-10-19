@@ -9,7 +9,7 @@ const StyledGalleryArtists = styled.div `
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        margin-top: 1rem;
+        margin: 3rem auto;
     }
 
     .gallery__title{
@@ -18,11 +18,6 @@ const StyledGalleryArtists = styled.div `
         font-size: 2rem;
     }
 
-    header, footer{
-        height: 10vh;
-        width: 100vw;
-        background-color:red;
-    }
 `
 
 export default StyledGalleryArtists;

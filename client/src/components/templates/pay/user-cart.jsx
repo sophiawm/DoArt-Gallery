@@ -20,6 +20,7 @@ const Pay =({prices})=>{
                 <p>Total products</p>
                 <p>{'x' + artsFind.length}</p> 
                 </div>
+                
                 <div className='pay__price'>
                 <p className=''>Total price</p>
                 <p>{artsFind.reduce((accumulator, item) => accumulator + item, 0) + '$'}</p>

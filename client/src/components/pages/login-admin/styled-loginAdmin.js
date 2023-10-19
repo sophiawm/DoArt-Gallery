@@ -2,11 +2,6 @@ import styled from 'styled-components';
 
 
 const StyledLoginAdmin = styled.div `
-    header, footer{
-        height: 10vh;
-        width: 100vw;
-        background-color: blue;
-    }
 
     .form{
         height: 80vh;
@@ -35,6 +30,65 @@ const StyledLoginAdmin = styled.div `
             gap: 3rem;
             border: none;
             width: 85%;
+        }
+
+        .form__container--input {
+            display: flex;
+            align-items: end;
+            border: solid black 0.1rem;
+            border-radius: 0.3rem;
+            width: 100%;
+          }
+        
+          label {
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-start;
+            font-size: 1rem;
+            font-weight: bold;
+            gap: 0.5rem;
+          }
+        
+          #form__input-user, #form__input-password {
+            height: 2rem;
+            width: 100%;
+            border: none;
+            border-radius: 0.2rem;
+          }
+
+        @media screen and (min-width: 391px){
+            .form__container--inputs{
+                width: 40%;
+            }
+
+            .form__container--input {
+                display: flex;
+                align-items: end;
+                border: solid black 0.1rem;
+                border-radius: 0.3rem;
+                width: 100%;
+              }
+            
+              label {
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: flex-start;
+                font-size: 1rem;
+                font-weight: bold;
+                gap: 0.5rem;
+              }
+            
+              #form__input-user, #form__input-password {
+                height: 2rem;
+                width: 100%;
+                border: none;
+                border-radius: 0.2rem;
+              }
+
         }
 
 `

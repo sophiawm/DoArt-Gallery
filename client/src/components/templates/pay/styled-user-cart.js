@@ -15,6 +15,13 @@ const StyledPay = styled.div`
         }
     }
 
+    @media screen and (min-width: 391px){
+        .pay {
+            width: 30rem;
+            width: 55%;
+        }
+    }
+
 
 `
 

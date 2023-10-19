@@ -1,4 +1,6 @@
 import { } from 'react';
+import Footer from '../../templates/footer-user/footer';
+import Header from '../../templates/header-user/header';
 import { dataUserOrder } from './data-user-order';
 import StyledUserOrder from './styled-user-order';
 
@@ -13,9 +15,10 @@ const UserOrder =()=>{
 
     return(
         <StyledUserOrder>
-            <header></header>
+            <Header />
             <section className='user__cart'>
-            <h1 className='user__title'>{'ORDER ' + findIndex.numberOrder}</h1>
+            <h1 className='cart__title'>PRODUCTS</h1>
+
             <ul className='card__container'>
                 {findIndex.order.map((a)=>{
                     return <li key={a.id} className='card'>
@@ -33,17 +36,20 @@ const UserOrder =()=>{
                 })}
             </ul>
 
+
+            <h1 className='user__title'>{'ORDER ' + findIndex.numberOrder}</h1>
+
             <section className='pay'>
                 <div className='pay__total'>
-                <p>Total products</p>
+                <p className='total-products-text'>Total products</p>
                 <p>{'x' + dataUserOrder.length}</p> 
                 </div>
                 <div className='pay__price'>
-                <p className=''>Total price</p>
+                <p className='total-price-text'>Total price</p>
                 <p>{findIndex.order.reduce((accumulator, item) => accumulator + item.price, 0) + '$'}</p>
                 </div>
-                <div className='pay__shipping'>
-                <p>Shipping costs</p>
+                <div className='pay__shipping-text'>
+                <p className='shipping-costs-text'>Shipping costs</p>
                 <p>15$</p>
                 </div> 
             </section>
@@ -53,7 +59,7 @@ const UserOrder =()=>{
                 <button className='button'>SHOP MORE</button>
             </div>
             </section>
-            <footer></footer>
+            <Footer />
         </StyledUserOrder>
     )
 }

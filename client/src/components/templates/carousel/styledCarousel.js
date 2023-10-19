@@ -16,7 +16,7 @@ li {
 
 
 
-.main-container {
+.carousel {
   width: 90%;
   height: 100%;
 }
@@ -82,6 +82,80 @@ li {
     border: none;
 }
 
+.carousel-desktop{
+  display: none; 
+}
+
+
+@media screen and (min-width: 391px){
+  .carousel{
+    display: none; 
+  }
+
+  .carousel-desktop{
+    display: block;
+    width: 100%;
+  }
+  .carusels__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    box-sizing: border-box;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 1rem;
+  }
+
+  .carousel__container{
+    width: 100%;
+    hegiht: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 1rem;
+  }
+
+  .carousel__img-container{
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover; 
+    align-self: center;
+    justify-self: center;
+  }
+
+  .carousel__img{
+    height: 15rem;
+    width: 15rem;
+  }
+
+  .carousel__biography{
+    width: 15rem;
+    height: auto;
+    text-wrap: wrap;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .carousel__button{
+    margin: 0 auto;
+  }
+
+  .carousel__artist{
+    font-size: 1.3rem;
+    font-weight: 800;
+  }
+
+  .carousel__typeArt{
+    font-weight: 600;
+  }
+
+
+}
 `
 
 export default StyledCarousel;

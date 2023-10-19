@@ -1,6 +1,8 @@
 import {} from 'react';
 import StyledDashboard from './styledDashBorad';
 import { dashboardArtist } from './dashboardArtist';
+import FooterAdmin from '../../templates/footer-admin/footer';
+import HeaderAdmin from '../../templates/header-admin/header';
 
 
 
@@ -8,11 +10,12 @@ import { dashboardArtist } from './dashboardArtist';
 const Dashboard = () => {
   return (
     <StyledDashboard>
-      <header></header>
+      <HeaderAdmin />
+
       <section className='dashboard'> 
 
 
-        <div className='search__container'>
+        <div className='search__container-mobile'>
           <label htmlFor="search__input">
             <input type="text" placeholder='Search for product...' id='search__input' />
           </label>
@@ -58,7 +61,7 @@ const Dashboard = () => {
         <button className='dashboard__button'>ADD ARTWORK</button>
         </div>
       </section>
-      <footer></footer>
+      <FooterAdmin />
     </StyledDashboard>
   );
 }

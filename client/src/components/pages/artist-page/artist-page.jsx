@@ -4,6 +4,8 @@ import { dataDoArt } from '../../../data';
 import CardProducts from '../../molecules/cards/card-products/card-products';
 
 import StyledArtistPage from './styled-artist-page';
+import Header from '../../templates/header-user/header';
+import Footer from '../../templates/footer-user/footer';
 
 
 const ArtistPage = ()=>{
@@ -13,16 +15,19 @@ const ArtistPage = ()=>{
 
     return(
         <StyledArtistPage>
-            <header></header>
+            <Header />
+
             <section className='artist-page'>
                 <CardArtistPage artistName={findArtist}/>
+
                 <h1 className='page__title'>ARTWORK</h1>
                 <CardProducts map={dataDoArt.find((a)=>{
                     return a.artist === findArtist}).products.map((b)=>{
                         return b 
                     })}/>
             </section>
-            <footer></footer>
+
+            <Footer />
         </StyledArtistPage>
     )
 }

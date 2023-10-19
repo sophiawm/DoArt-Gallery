@@ -3,6 +3,7 @@ import { dataDoArt } from '../../../../data';
 import StyledCardArtistPage from './styled-artist-page';
 
 
+// eslint-disable-next-line react/prop-types
 const CardArtistPage = ({artistName})=>{
 
 

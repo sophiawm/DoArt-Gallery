@@ -2,18 +2,6 @@ import styled from 'styled-components';
 
 
 const StyledProfile = styled.div `
-    header{
-        height: 10vh;
-        width: 100vw;
-        background-color: blue;
-    }
-
-    footer{
-        height: 10vh;
-        width: 100vw;
-        background-color: blue;
-    }
-
     .form{
         min-height: 80vh;
         max-height: 100%;
@@ -24,29 +12,33 @@ const StyledProfile = styled.div `
         align-items: center;
         gap: 1rem;
         margin: 1rem auto;
-        &__title{
-            font-size: 1.8rem;
-            text-align: center;
-        }
-        &__container{
-            height: 100%;
-            width: 100vw;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 1rem;
-        }
-        &__container--inputs{
-            height: auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            gap: 1rem;
-            border: none;
-        }
+    }
+
+    .form__title{
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    .form__container{
+        height: 100%;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+    .form__container--inputs{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 1rem;
+        border: none;
+        width: 19rem;
+    }
+
     #form__input--user, #form__input--password, #form__input--name{
-        width: 18rem;
+        width: 100%;
         height: 2rem;
         border: none;
         border-radius: 0.3rem;
@@ -126,6 +118,59 @@ const StyledProfile = styled.div `
         background-color: white;
         border: none;
         border-radius: 0.3rem;
+    }
+
+    @media screen and (min-width: 391px){
+
+        .form{
+            display: grid;
+            grid-template-columns: 70% 30%;
+            grid-template-rows: auto 60% auto;
+            margin: 2rem 0;
+        }
+
+
+        .form__title{
+            grid-column: 1/ span 2;
+            grid-row: 1;
+
+        }
+
+        .form__container{
+            grid-column: 1;
+            width: 100%;
+        }
+
+        .form__container--inputs{
+            width: 50%;
+        }
+
+        
+
+        .orders__title{
+            grid-column: 2;
+            grid-row:2;
+        }
+
+        .orders__container{
+            grid-column: 2;
+            grid-row:2;
+            align-self: center;
+        }
+
+        .buttons__container{
+            align-self: start;
+        }
+
+        .button{
+            width: 13rem;
+            align-self: start;
+            margin: 0;
+        }
+
+  
+
+
     }
 
 `

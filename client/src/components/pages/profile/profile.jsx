@@ -1,15 +1,24 @@
 import {} from "react";
 import StyledProfile from "./styled-profile";
 import { dataProfile } from "./data-profile";
+import Header from "../../templates/header-user/header";
+import Footer from "../../templates/footer-user/footer";
 
 const Profile = () => {
   return (
     <StyledProfile>
-      <header></header>
+      <Header />
+
       <section className="form">
+
         <h1 className="form__title">YOUR PROFILE</h1>
+
+
         <form action="" className="form__container">
+
+
           <div className="form__container--inputs">
+
             <label htmlFor="form__input--name">NAME</label>
             <div className="form__container--input">
               <input type="text" id="form__input--name" />
@@ -49,7 +58,7 @@ const Profile = () => {
         </div>
       </section>
 
-      <footer></footer>
+      <Footer />
     </StyledProfile>
   );
 };

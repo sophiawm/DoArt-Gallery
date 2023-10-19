@@ -1,28 +1,48 @@
 import {} from "react";
 import ButtonSmall from "../../atoms/buttons/button-small";
-import InputText from "../../atoms/inputs/input-text/input-text";
+import FooterAdmin from "../../templates/footer-admin/footer";
+import HeaderAdmin from "../../templates/header-admin/header";
 import StyledLoginAdmin from "./styled-loginAdmin";
 
 
 const LoginAdmin = () => {
   return (
     <StyledLoginAdmin>
-      <header></header>
+      <HeaderAdmin />
       <section className="form">
         <h1 className="form__title">
-          WELCOME, <br /> ADMIN!
+          WELCOME, ADMIN!
         </h1>
+
         <form action="" className="form__container">
           <div className="form__container--inputs">
-            <InputText title={"NAME"} gap={"0.3"} type={"text"} />
+            <label htmlFor="form__input-user">
+            USER
+              <div className="form__container--input">
+                <input
+                  type='text'
+                  id="form__input-user"
+                />
+              </div>
+            </label>
 
-            <InputText title={"PASSWORD"} gap={"0.3"} type={"password"} />
+            <label htmlFor="form__input-password">
+            PASSWORD
+              <div className="form__container--input">
+                <input
+                  type='password'
+                  id="form__input-password"
+                />
+              </div>
+            </label>
+            
+
           </div>
 
           <ButtonSmall text={"LOGIN"} color={"black"} width={"15rem"} />
         </form>
       </section>
-      <footer></footer>
+      <FooterAdmin />
     </StyledLoginAdmin>
   );
 };

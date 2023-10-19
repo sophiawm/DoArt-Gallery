@@ -2,12 +2,6 @@ import styled from 'styled-components';
 
 
 const StyledOrders = styled.div `
-    header, footer{
-        height: 10vh;
-        width: 100vw;
-        background-color: blue;
-    }
-
     .orders{
         min-height: 80vh;
         max-height: 100%;

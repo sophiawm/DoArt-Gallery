@@ -1,31 +1,131 @@
 import ButtonSmall from "../../atoms/buttons/button-small";
-import InputFile from "../../atoms/inputs/input-file/input-file";
-import InputSelect from "../../atoms/inputs/input-select/input-select";
-import InputText from "../../atoms/inputs/input-text/input-text";
-import InputTextarea from "../../atoms/inputs/input-textarea/input-textarea";
+import Footer from "../../templates/footer-user/footer";
 import StyledFormAddArtist from "./styled-form-add-artist";
+import { useRef } from 'react';
+import { useState } from 'react';
+import HeaderAdmin from "../../templates/header-admin/header";
+import FooterAdmin from "../../templates/footer-admin/footer";
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const categories = ['Paintings', 'Sculpture', 'Textiles','Photography', 'Collage' ,'Mixed-media'];
 
 const artWork = [''];
 
 const AddArtistForm = () => {
 
+
+  const inputText = useRef(null);
+  const inputFile = useRef(null);
+  const [fileName, setFileName] = useState('');
+
+
+  const text = () => {
+    const file = inputFile.current.files[0];
+
+    if (file) {
+      setFileName(file.name);
+    }
+  };
+
   return (
     <StyledFormAddArtist>
-      <header></header>
+      <HeaderAdmin />
       <section className="form-add-artist">
-        <h1>ADD AN ARTIST</h1>
+        <h1 className="form__title">ADD ARTIST</h1>
         <form action="" className="form__add-artist">
-        <InputFile title={'UPLOAD IMAGE'} gap={'1'}/>
-        <InputText title={"ARTIST"} gap={"1"} type={'text'} />
-        <InputSelect title={'CATEGRY'} gap={'1'} map={categories}/>
-        <InputTextarea title={'DESCRIPTION'} gap={'1'}/>
-        <InputSelect title={'SELECT ARTWORK'} gap={'1'} map={artWork.map(a=>a)}/>
-        <ButtonSmall text={'SAVE'} color={'black'} width={'20rem'}/>
+
+        <div className="form__inputs-columnOne"> 
+
+
+
+        <label htmlFor="form__input-file">
+            UPLOAD IMAGE
+              <div className="form__container--input">
+                <input
+                  type="file"
+                  id="form__input-file"
+                  ref={inputFile}
+                  onChange={text}
+                />
+                <div className="form__input-text" ref={inputText}>
+                  {fileName}
+                </div>
+                <div className="form__input-icon"></div>
+              </div>
+            </label>
+
+
+
+
+
+        <label htmlFor="form__input-text">
+              ARTIST
+              <div className="form__container--input">
+                <input
+                  type='text'
+                  id="form__input-text"
+                />
+              </div>
+            </label>
+
+
+
+
+        <label htmlFor="form__input-select" >
+        CATEGORY
+        <div className="form__container--input">
+          <select type="text" id="form__input-select">
+            <option value=""></option>
+            {categories.map((a, b) => (
+              <option key={b} value={a}>
+                {a}
+              </option>
+            ))}
+          </select>
+        </div>
+      </label>
+
+
+        </div>
+        <div className="form__inputs-columnTwo"> 
+
+
+
+        <label htmlFor="form__input-textarea">
+            DESCRIPTION
+           
+                <textarea
+                  type="text"
+                  id="form__input-textarea"
+                ></textarea>
+      
+            </label>
+
+
+
+        <label htmlFor="form__input-artwork">
+              SELECT ARTWORK
+        <div className="form__container--input">
+          <select type="text" id="form__input-artwork">
+            <option value=""></option>
+            {artWork.map((a, b) => (
+              <option key={b} value={a}>
+                {a}
+              </option>
+            ))}
+          </select>
+        </div>
+      </label>
+
+        </div>
+
+        <div className="form__button">
+        <ButtonSmall text={'SAVE'} color={'black'} width={'20rem'} />
+        </div>
         </form>
       </section>
-      <footer></footer>
+      
+      <FooterAdmin />
     </StyledFormAddArtist>
   );
 };

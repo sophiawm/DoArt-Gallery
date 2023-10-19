@@ -3,6 +3,8 @@ import StyledUserCart from './styled-user-cart';
 import ButtonSmall from '../../atoms/buttons/button-small';
 import Pay from '../../templates/pay/user-cart';
 import CardOrder from '../../molecules/cards/card-order/user-cart';
+import Header from '../../templates/header-user/header';
+import Footer from '../../templates/footer-user/footer';
 
 
 
@@ -12,13 +14,19 @@ const UserCart =()=>{
 
     return(
         <StyledUserCart>
-            <header></header>
+            <Header />
             <section className='user__cart'>
             <h1 className='user__title'>SHOPPING CART</h1>
             
+            <div className='cart'>
             <CardOrder arts={artCart}/>
+            </div>
 
+
+            <div className='pay__cart'>
             <Pay prices={artCart}/>
+            </div>
+
 
             <div className='buttons__container'>
 
@@ -28,7 +36,7 @@ const UserCart =()=>{
             </div>
 
             </section>
-            <footer></footer>
+            <Footer />
         </StyledUserCart>
     )
 }

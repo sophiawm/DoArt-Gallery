@@ -2,12 +2,6 @@ import styled from 'styled-components';
 
 
 const StyledUserOrder = styled.div`
-    header, footer{
-        height: 10vh;
-        width: 100vw;
-        background-color: green;
-    }
-
     .user__title {
         text-align: center;
     }
@@ -110,6 +104,71 @@ const StyledUserOrder = styled.div`
         font-size: 1rem;
         color: white;
         border-radius: 3rem;
+    }
+
+    @media screen and (min-width: 391px){
+        .user__cart{
+            display: grid;
+            width: 100vw;
+            min-height: 80vh;
+            max-height: 100%;
+            margin: 3rem auto;
+            justify-content: center;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto auto auto auto auto;
+            gap: 1rem;
+        }
+
+        .card__container{
+            grid-row: 2/span 6;
+            justify-self: center;
+            grid-column: 1;
+            width: 75%;
+            margin: 0 auto;
+            align-self: start;
+        }
+
+        .pay{
+            grid-column: 2;
+            grid-row: 2/span 6;
+            align-self: center;
+            justify-self: center;
+            margin: 0 auto;
+            gap: 1rem;
+            font-size: 1.2rem;
+            width: 90%;
+        }
+
+        .cart__title{
+            grid-row: 1;
+            grid-column: 1;
+            align-self: end;
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        .user__title{
+            grid-row: 2;
+            grid-column: 2;
+        }
+
+        .buttons__container{
+            grid-row: 7;
+            grid-column: 2;
+            align-self: start;
+            height: auto;
+        }
+
+        .total-products-text, .total-price-text, .shipping-costs-text{
+            font-weight: bold;
+        }
+
+        .pay__shipping-text{
+            display: flex;
+            justify-content: space-between;
+        }
+
+
     }
 
 

@@ -1,16 +1,20 @@
 import { } from 'react';
 import Categories from '../../templates/categories/categories';
+import Footer from '../../templates/footer-user/footer';
+import Header from '../../templates/header-user/header';
 import StyledAboutUs from './about';
 
 
 const AboutUs =()=>{
     return(
         <StyledAboutUs>
-           <header></header>
+           <Header />
             <section className='about'>
                 <div className='about__image'>
                     <h1 className='about__image-text'>Welcome to a new place to feel inspired</h1>
                 </div>
+
+                <div className='container__mision-vision'>
 
                 <div className='about__our-mission-container'>
                 <h1 className='about__our-mission-title'>OUR MISSION</h1>
@@ -25,10 +29,11 @@ const AboutUs =()=>{
                 <div className='about__logo-container'>
                 <img src="src/assets/pages/about-logo.svg" alt="about-logo" className='about__logo'/>
                 </div>
+                </div>
 
                 <Categories />
             </section>
-            <footer></footer>
+            <Footer />
         </StyledAboutUs>
     )
 }

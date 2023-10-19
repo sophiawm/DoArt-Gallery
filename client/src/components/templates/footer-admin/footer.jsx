@@ -1,16 +1,18 @@
 import { } from 'react';
-import StyledFooter from './styled-footer';
+import StyledFooterAdmin from './styled-footer';
 
 
-const Footer =()=>{
+const FooterAdmin =()=>{
     return(
-        <StyledFooter>
+        <StyledFooterAdmin>
             <footer className='footer'>
+                <div className='container__image-text'>
                 <img src="src/assets/pages/logo-footer.svg" alt="logo-footer" className='footer__logo'/>
                 <p className='footer__text'>Find the art you love</p>
+                </div>
             </footer>
-        </StyledFooter>
+        </StyledFooterAdmin>
     )
 }
 
-export default Footer;
+export default FooterAdmin;
