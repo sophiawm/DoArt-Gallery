@@ -63,6 +63,96 @@ export const dashboardArtist = [
         ]  
        },
        
+    {
+        artistId: 3,
+        artist: 'Barbara Kruger',
+        products :[
+            {
+            id: 1,
+            img: 'src/assets/images/art-image4.svg',
+            productName: 'Hybrid Mask II (K’peliye’e), 2021',
+            characteristics: 'Handpainted resin mask on a brass',
+            size: '20 × 8 × 8 cm',
+            price: `${6900} €`
+         },
+         {
+            id: 2,
+            img: 'src/assets/images/art-image4.svg',
+            productName: 'Hybrid Mask II (K’peliye’e), 2021',
+            characteristics: 'Handpainted resin mask on a brass',
+            size: '20 × 8 × 8 cm',
+            price: `${6900} €`
+         },
+         {
+            id: 3,
+            img: 'src/assets/images/art-image4.svg',
+            productName: 'Hybrid Mask II (K’peliye’e), 2021',
+            characteristics: 'Handpainted resin mask on a brass',
+            size: '20 × 8 × 8 cm',
+            price: `${6900} €`
+         }
+        ]  
+       },
+       {
+           artistId: 2,
+           artist: 'Barbara Kruger',
+           products :[
+               {
+               id: 1,
+               img: 'src/assets/images/art-image4.svg',
+               productName: 'Hybrid Mask II (K’peliye’e), 2021',
+               characteristics: 'Handpainted resin mask on a brass',
+               size: '20 × 8 × 8 cm',
+               price: `${6900} €`
+            },
+            {
+               id: 2,
+               img: 'src/assets/images/art-image4.svg',
+               productName: 'Hybrid Mask II (K’peliye’e), 2021',
+               characteristics: 'Handpainted resin mask on a brass',
+               size: '20 × 8 × 8 cm',
+               price: `${6900} €`
+            },
+            {
+               id: 3,
+               img: 'src/assets/images/art-image4.svg',
+               productName: 'Hybrid Mask II (K’peliye’e), 2021',
+               characteristics: 'Handpainted resin mask on a brass',
+               size: '20 × 8 × 8 cm',
+               price: `${6900} €`
+            }
+           ]  
+          },
+          {
+              artistId: 2,
+              artist: 'Barbara Kruger',
+              products :[
+                  {
+                  id: 1,
+                  img: 'src/assets/images/art-image4.svg',
+                  productName: 'Hybrid Mask II (K’peliye’e), 2021',
+                  characteristics: 'Handpainted resin mask on a brass',
+                  size: '20 × 8 × 8 cm',
+                  price: `${6900} €`
+               },
+               {
+                  id: 2,
+                  img: 'src/assets/images/art-image4.svg',
+                  productName: 'Hybrid Mask II (K’peliye’e), 2021',
+                  characteristics: 'Handpainted resin mask on a brass',
+                  size: '20 × 8 × 8 cm',
+                  price: `${6900} €`
+               },
+               {
+                  id: 3,
+                  img: 'src/assets/images/art-image4.svg',
+                  productName: 'Hybrid Mask II (K’peliye’e), 2021',
+                  characteristics: 'Handpainted resin mask on a brass',
+                  size: '20 × 8 × 8 cm',
+                  price: `${6900} €`
+               }
+              ]  
+             },
     
 
 ]

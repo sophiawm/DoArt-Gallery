@@ -1,6 +1,5 @@
 import {} from "react";
 import ButtonSmall from "../../atoms/buttons/button-small";
-import InputText from "../../atoms/inputs/input-text/input-text";
 import Footer from "../../templates/footer-user/footer";
 import Header from "../../templates/header-user/header";
 import StyledRegister from "./styled-register";

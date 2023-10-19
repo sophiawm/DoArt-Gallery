@@ -183,12 +183,65 @@ const StyledDashboard = styled.div `
         color: white;
         border-radius: 3rem;
     }
+    .button-before{
+       display: none;
+
+      }
+    
+      .button-after{
+        display: none;
+      }
 
     @media screen and (min-width: 391px){
 
     .search__container-mobile{
         display: none;
     }
+
+
+    .product{
+        display: flex;
+        width: 58vw;
+        overflow: scroll;
+        transition: transform 2s ease-out;
+    }
+
+    .button-before{
+        width: 4rem;
+        height: 2rem;
+        grid-column: 1;
+        grid-row: 1;
+        background-color: white; 
+        border: none;
+        font-size: 5rem;
+
+      }
+    
+      .button-after{
+        width: 4rem;
+        height: 2rem;
+        grid-column: 3;
+        grid-row: 1;
+        background-color: white; 
+        border: none;
+        font-size: 5rem;
+
+      }
+
+      .card{
+        transition: transform 2s ease-out;
+        gap:1rem; 
+      }
+
+      .product__container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 1fr;
+        align-items: center;
+        
+      }
+
+
 }
 `
 

@@ -1,161 +1,182 @@
 import styled from 'styled-components';
 
-
-const StyledCarousel = styled.div `
-
-ul,
-li {
-  list-style: none;
-  white-space: nowrap;
-}
-
-li {
-  display: inline-block;
-  text-align: center;
-}
-
-
-
-.carousel {
-  width: 90%;
-  height: 100%;
-}
-
-
-.slider-container {
-  position: relative;
-  height: 100%;
-}
-
-
-
-.leftArrow {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  left: 32px;
-  font-size: 50px;
-  font-weight: 700;
-  color: black;
-  z-index: 999;
-  cursor: pointer;
-}
-
-.rightArrow {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  right: 32px;
-  font-size: 50px;
-  font-weight: 700;
-  color: black;
-  z-index: 999;
-  cursor: pointer;
-}
-
-.container-images {
-    width: 370px;
-    height: 100%;
-    border: 1px solid #eee;
+const StyledCarousel = styled.div`
+  .contenedor {
+    height: auto;
+    width: 15rem;
+    margin: 3rem auto;
     overflow: hidden;
-}
-
-.carousel__description {
-    overflow: hidden;
-    white-space: wrap;
-    width: 50%;
-    margin: 0 auto; 
-  }
-
-.carousel__title{
-    width: auto;
-}
-
-
-.carousel__button{
-    height: 4rem;
-    width: 10rem;
-    border-radius: 3rem;
-    background-color: #8C8C8C;
-    color: white;
-    font-weight: bold;
-    border: none;
-}
-
-.carousel-desktop{
-  display: none; 
-}
-
-
-@media screen and (min-width: 391px){
-  .carousel{
-    display: none; 
-  }
-
-  .carousel-desktop{
-    display: block;
-    width: 100%;
-  }
-  .carusels__container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 15rem 15rem 15rem;
     grid-template-rows: 1fr;
-    box-sizing: border-box;
-    justify-content: center;
-    margin: 0 auto;
-    gap: 1rem;
+    grid-column: 2;
+    grid-row: 1;
   }
 
-  .carousel__container{
-    width: 100%;
-    hegiht: 100%;
+  .contenedor__carrusel {
+    height: auto;
+    width: 15rem;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    justify-content: center;
     gap: 1rem;
+    align-items: center;
+    border: none;
+    transition: transform 2s ease-out;
   }
 
-  .carousel__img-container{
-    height: 15rem;
-    width: 15rem;
-    border-radius: 50%;
-    overflow: hidden; 
+  .contenedor__img {
+    height: 14.8rem;
+    width: 14.8rem;
+    overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;
-    object-fit: cover; 
-    align-self: center;
-    justify-self: center;
+    align-items: center; 
+    border-radius: 50%;
   }
 
-  .carousel__img{
-    height: 15rem;
-    width: 15rem;
+  .img {
+    height: 16rem;
+    width: 16rem;
   }
 
-  .carousel__biography{
-    width: 15rem;
+  .artist {
+    width: 100%;
     height: auto;
-    text-wrap: wrap;
-    margin: 0 auto;
+    text-align: center;
+    font-size: 1.9rem;
+  }
+
+  .typeart {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .biografia {
+    width: 100%;
+    height: auto;
     text-align: center;
   }
 
-  .carousel__button{
-    margin: 0 auto;
+  .categorias {
+    width: 100%;
+    height: auto;
   }
 
-  .carousel__artist{
-    font-size: 1.3rem;
-    font-weight: 800;
+  .boton {
+    width: 100%;
+    height: 2rem;
   }
 
-  .carousel__typeArt{
-    font-weight: 600;
+  .boton-antes{
+    width: 4rem;
+    height: 2rem;
+    grid-column: 1;
+    grid-row: 1;
+    background-color: white; 
+    border: none;
+    font-size: 5rem;
+    margin-bottom: 10rem;
+  }
+
+  .boton-despues{
+    width: 4rem;
+    height: 2rem;
+    grid-column: 3;
+    grid-row: 1;
+    background-color: white; 
+    border: none;
+    font-size: 5rem;
+    margin-bottom: 10rem;
   }
 
 
-}
-`
+  .container__carousel{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-desktop{
+    display: none;
+  }
+
+  @media screen and (min-width: 391px){
+    .contenedor, .boton-despues, .boton-antes{
+      display: none; 
+    }
+  
+    .carousel-desktop{
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    .carusels__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      box-sizing: border-box;
+      justify-content: center;
+      margin: 0 auto;
+      gap: 1rem;
+    }
+  
+    .carousel__container{
+      width: 100%;
+      hegiht: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      gap: 1rem;
+    }
+  
+    .carousel__img-container{
+      height: 15rem;
+      width: 15rem;
+      border-radius: 50%;
+      overflow: hidden; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      object-fit: cover; 
+      align-self: center;
+      justify-self: center;
+    }
+  
+    .carousel__img{
+      height: 15rem;
+      width: 15rem;
+    }
+  
+    .carousel__biography{
+      width: 15rem;
+      height: auto;
+      text-wrap: wrap;
+      margin: 0 auto;
+      text-align: center;
+    }
+  
+    .carousel__button{
+      margin: 0 auto;
+    }
+  
+    .carousel__artist{
+      font-size: 1.3rem;
+      font-weight: 800;
+      text-align: center;
+    }
+  
+    .carousel__typeArt{
+      font-weight: 600;
+      text-align: center;
+    }
+
+
+
+`;
 
 export default StyledCarousel;

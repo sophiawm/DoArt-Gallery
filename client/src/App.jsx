@@ -16,46 +16,30 @@ import UserOrder from './components/pages/user-order/user-order'
 import Register from './components/pages/user-register/register'
 import Orders from './components/pages/orders/orders'
 import Pay from './components/templates/pay/user-cart'
-import Header from './components/templates/header-user/header'
-import Footer from './components/templates/footer-user/footer'
-import HeaderAdmin from './components/templates/header-admin/header'
-import FooterAdmin from './components/templates/footer-admin/footer'
-import Carrusel from './carrusel'
+import Carousel from './components/templates/carousel/carouselImg'
 
 
 
 function App() {
   return (
     <>
-  <Carrusel />
-
-  {/* <Home /> ✅ crear carrusel */}
-  {/* <AboutUs /> ✅ */}
-  {/* <ArtistPage /> ✅ */}
-  {/* <Category /> ✅ */}
-  {/* <Dashboard />  ✅ */}
-
-
-  {/* <AddArtistForm />  ✅ */}
-
+    <Carousel />
+  {/* <Home />  */}
+  {/* <AboutUs />  */}
+  {/* <ArtistPage />  */}
+  {/* <Category />  */}
+  {/* <Dashboard />  */}
+  {/* <AddArtistForm />  */}
   {/* <AddArtwork />  */}
-
-  {/* <GalleryArtist /> ✅ */}
-
-  {/* <LoginAdmin />  ➖ */}
-
-  {/* <LoginUser />  ✅ */}
-
-  {/* <Product /> crear carrusel✅ */}
-  {/* <Profile />  ✅ */}
-
-  {/* <UserCart />✅ */}
-
-  {/* <UserOrder />  ✅ */}
-
-  {/* <Register />  ✅ */}
-
-  {/* <Orders /> crear carrusel ✅ */}
+  {/* <GalleryArtist /> */}
+  {/* <LoginAdmin />   */}
+  {/* <LoginUser /> */}
+  {/* <Product /> */}
+  {/* <Profile /> */}
+  {/* <UserCart /> */}
+  {/* <UserOrder />  */}
+  {/* <Register />  */}
+  {/* <Orders />  */}
     </>
   )
 }
