@@ -16,14 +16,15 @@ import UserOrder from './components/pages/user-order/user-order'
 import Register from './components/pages/user-register/register'
 import Orders from './components/pages/orders/orders'
 import Pay from './components/templates/pay/user-cart'
+import Modale from './components/templates/Modales/Modale'
 
 
 
 function App() {
   return (
     <>
-
-   <Home /> 
+  <Modale />
+   {/*<Home />  */}
   {/* <AboutUs /> */}
   {/* <ArtistPage /> */}
   {/* <Category /> */}

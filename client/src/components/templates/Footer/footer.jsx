@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import logo from './ruta/al/logo.png'; // Poner logo en esta ruta
+ // Poner logo en esta ruta
 
 const FooterContainer = styled.div`
   background-color: #f8f9fa;
