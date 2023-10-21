@@ -10,7 +10,7 @@ import Dashboard from '../src/components/pages/dashboard/dashboard';
 
 describe('testing pages',()=>{
 
-     test('render home', async () => { 
+     test('render home', () => { 
         render(<Home />);
         const title = screen.getByText(/The digital art gallery you’ve always wanted/i)
 
@@ -42,7 +42,7 @@ describe('testing pages',()=>{
         const ourMisionTitle = screen.getByText(/OUR VISION/i)
 
 
-
+        
         expect(title).toBeInTheDocument();
         expect(titleMision).toBeInTheDocument();
         expect(titleMisionText).toBeInTheDocument();
@@ -97,6 +97,26 @@ describe('testing pages',()=>{
 
         const buttonBefore = screen.getByRole('button', { name: '⟨' });
         expect(buttonBefore).toBeInTheDocument();
+
+
+
+
+        // como hacer testing:
+
+        // un componente es cada elemento dentro de la carpeta page renderiza la pagina como la home, about etc... y cada elemento como un <p>, <button>, <h1> que tenga texto dentro realiza lo demas uno por uno
+        test('coloca render y el nombre del componente',()=>{
+            render(<Home />) //aqui renderiza el componente que haras test
+
+
+
+            //aqui crea una variable ponle nombre pon donde dice texto el texto que tiene ese componente, copia y pega el texto que tiene el componente porque debe ser igual
+            const nombre = screen.getByText(/texto/i);
+
+
+            
+            //aqui dentro de expect pon tu variable y nada mas
+            expect(nombre).toBeInTheDocument();
+        })
 
 
 
