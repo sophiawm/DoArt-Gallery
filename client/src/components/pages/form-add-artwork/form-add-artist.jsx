@@ -1,5 +1,4 @@
 import StyledFormAddArtist from "./styled-form-add-artist";
-import { dataDoArt } from "../../../data";
 import ButtonSmall from "../../atoms/buttons/button-small";
 import InputTextarea from "../../atoms/inputs/input-textarea/input-textarea";
 import HeaderAdmin from "../../templates/header-admin/header";

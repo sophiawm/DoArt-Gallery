@@ -15,31 +15,28 @@ import UserCart from './components/pages/user-cart/user-cart'
 import UserOrder from './components/pages/user-order/user-order'
 import Register from './components/pages/user-register/register'
 import Orders from './components/pages/orders/orders'
-import Pay from './components/templates/pay/user-cart'
-import Carousel from './components/templates/carousel/carouselImg'
 
 
 
 function App() {
   return (
     <>
-    <Carousel />
-  {/* <Home />  */}
-  {/* <AboutUs />  */}
-  {/* <ArtistPage />  */}
-  {/* <Category />  */}
-  {/* <Dashboard />  */}
-  {/* <AddArtistForm />  */}
-  {/* <AddArtwork />  */}
-  {/* <GalleryArtist /> */}
-  {/* <LoginAdmin />   */}
-  {/* <LoginUser /> */}
-  {/* <Product /> */}
-  {/* <Profile /> */}
-  {/* <UserCart /> */}
-  {/* <UserOrder />  */}
-  {/* <Register />  */}
-  {/* <Orders />  */}
+  <Home /> 
+  <AboutUs /> 
+  <ArtistPage /> 
+  <Category /> 
+  <Dashboard /> 
+  <AddArtistForm /> 
+  <AddArtwork /> 
+  <GalleryArtist />
+  <LoginAdmin />  
+  <LoginUser />
+  <Product />
+  <Profile />
+  <UserCart />
+  <UserOrder /> 
+  <Register /> 
+  <Orders /> 
     </>
   )
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import StyledDashboard from './styledDashBorad';
 import { dashboardArtist } from './dashboardArtist';
 import FooterAdmin from '../../templates/footer-admin/footer';

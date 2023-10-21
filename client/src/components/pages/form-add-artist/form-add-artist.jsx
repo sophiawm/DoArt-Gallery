@@ -1,5 +1,4 @@
 import ButtonSmall from "../../atoms/buttons/button-small";
-import Footer from "../../templates/footer-user/footer";
 import StyledFormAddArtist from "./styled-form-add-artist";
 import { useRef } from 'react';
 import { useState } from 'react';

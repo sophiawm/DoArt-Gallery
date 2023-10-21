@@ -1,14 +1,14 @@
 import {} from "react";
 import ButtonSmall from "../../atoms/buttons/button-small";
 import FooterAdmin from "../../templates/footer-admin/footer";
-import HeaderLoginAdmin from "../../templates/header-login-admin/header";
+import HeaderLoginAdmin from "../../templates/header-admin copy/header";
 import StyledLoginAdmin from "./styled-loginAdmin";
 
 
 const LoginAdmin = () => {
   return (
     <StyledLoginAdmin>
-      <HeaderLoginAdmin />
+      <HeaderLoginAdmin/>
       <section className="form">
         <h1 className="form__title">
           WELCOME, ADMIN!
