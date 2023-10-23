@@ -5,6 +5,7 @@ import Pay from '../../templates/pay/user-cart';
 import CardOrder from '../../molecules/cards/card-order/user-cart';
 import Header from '../../templates/header-user/header';
 import Footer from '../../templates/footer-user/footer';
+import { Link } from 'react-router-dom';
 
 
 
@@ -29,8 +30,10 @@ const UserCart =()=>{
 
 
             <div className='buttons__container'>
-
+                <Link to='/'>
                 <ButtonSmall text={'SHOP MORE'} color={'black'} width={'10rem'}/>
+                </Link>
+
                 <ButtonSmall text={'CHECK OUT'} color={'black'} width={'10rem'}/>
 
             </div>

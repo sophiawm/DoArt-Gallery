@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import StyledHeaderLoginAdmin from './styled-header';
+import { Link } from 'react-router-dom';
 
 
 const HeaderLoginAdmin = () => {
@@ -47,9 +48,11 @@ const HeaderLoginAdmin = () => {
   return (
     <StyledHeaderLoginAdmin>
       <header className='header'>
+        <Link to='/' >
         <div className='logo-container' >
           <img src="src/assets/pages/logo-DoArt.svg" alt="logo" />
         </div>
+        </Link>
         <div className='icons-container'>
           <img src="src/assets/icons/notification-icon.svg" alt="notification-icon" className='icons-container__notification' />
           <img src="src/assets/icons/shopping-cart-icon.svg" alt="shopping-cart-icon" className='icons-container__shopping-cart' />
@@ -83,8 +86,9 @@ const HeaderLoginAdmin = () => {
 
       {/* version desktop */}
       <header className='header-desktop'>
+      <Link to='/'>
       <img src="src/assets/pages/logo-DoArt.svg" alt="logo" className='header__logo'/> 
-
+      </Link>
       </header>
 
 

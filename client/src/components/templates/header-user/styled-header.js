@@ -15,6 +15,7 @@ const StyledHeader = styled.div `
 
 
 
+
     .logo-container{
         margin-left: 1rem;
 
@@ -168,7 +169,6 @@ const StyledHeader = styled.div `
                 border-bottom: none;
               }
         }
-
 
     }
 

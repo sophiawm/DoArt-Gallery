@@ -2,8 +2,39 @@ import { useState, useEffect } from 'react';
 import { dataDoArt } from '../../../data';
 import ButtonSmall from '../../atoms/buttons/button-small';
 import StyledCarousel from './styledCarousel';
+import { Link } from 'react-router-dom';
+
 
 const Carousel = () => {
+  //obtener datos
+  const [artist, setArtist] = useState([]);
+
+  useEffect(()=>{
+      const getArtist=()=>{
+          fetch('http://localhost:3002/artist')
+              .then((res)=>{
+                  return res.json()
+              })
+              .then((res)=>{
+                  setArtist(res)
+                  console.log(res)
+              })
+              .catch((error)=>{
+                  console.log(error)
+              })
+      }
+      getArtist();
+  },[])
+
+
+
+
+
+
+
+
+
+  //carrusel de fotos
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const [autoPlay, setAutoPlay] = useState(true);
@@ -76,15 +107,17 @@ const Carousel = () => {
 
        <div className="carousel-desktop">
         <ul className='carusels__container'>
-          {dataDoArt.map((a)=>{
-            return <li key={a.artist} className='carousel__container'>
+          {artist.map((a)=>{
+            return <li key={a.id} className='carousel__container'>
               <div className='carousel__img-container'>
-                <img src={a.imgArtist} alt="img-artist" className='carousel__img' />
+                <img src={a.artistImage} alt="img-artist" className='carousel__img' />
               </div>
-              <p className='carousel__artist'>{a.artist}</p>
-              <p className='carousel__typeArt'>{a.typeArt}</p>
-              <p className='carousel__biography'>{a.biography}</p>
+              <p className='carousel__artist'>{a.artistName}</p>
+              <p className='carousel__typeArt'>{a.artistCategory}</p>
+              <p className='carousel__biography'>{a.artistDescription}</p>
+              <Link to='/artist-page'>
               <ButtonSmall text={'SEE MORE'} color={'gray'} width={'9rem'} />
+              </Link>
             </li>
           })}
         </ul>

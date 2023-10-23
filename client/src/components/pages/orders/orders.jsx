@@ -1,6 +1,6 @@
 import {} from "react";
-import Footer from "../../templates/footer-user/footer";
-import Header from "../../templates/header-user/header";
+import FooterAdmin from "../../templates/footer-admin/footer";
+import HeaderAdmin from "../../templates/header-admin/header";
 import { dataProfile } from "../profile/data-profile";
 import StyledOrders from "./styled-orders";
 
@@ -9,7 +9,7 @@ import StyledOrders from "./styled-orders";
 const Orders = () => {
   return (
     <StyledOrders>
-      <Header />
+      <HeaderAdmin />
       <section className="orders">
 
         <h1 className="orders__title">ORDERS</h1>
@@ -31,7 +31,7 @@ const Orders = () => {
         </ul>
       </section>
 
-      <Footer />
+      <FooterAdmin />
     </StyledOrders>
   );
 };

@@ -1,23 +1,33 @@
-import {} from "react";
+import { useEffect, useState } from "react";
 import StyledProduct from "./styled-product";
-import { dataDoArt } from "../../../data";
 import ButtonSmall from "../../atoms/buttons/button-small";
 import Header from "../../templates/header-user/header";
 import Footer from "../../templates/footer-user/footer";
+import { useParams } from 'react-router-dom';
 
 const Product = () => {
-  const nameProduct = "Some Said You Were the Spitting Image of Evil, 1995-1996";
+  const { art } = useParams();
 
+  const [artwork, setArtwork] = useState([]);
 
-  const findProduct = dataDoArt.flatMap((a)=>{
-    return a.products.find((b)=>{
-      return b.nameProduct = nameProduct;
-    })
-  })
+  useEffect(()=>{
+    const getArtwork=()=>{
+      fetch('http://localhost:3002/artwork/art')
+        .then((res)=>{
+          return res.json()
+        })
+        .then((res)=>{
+          setArtwork(res.find((a)=>{
+            return a.artworkName === art
+          }))
+        })
+        .catch((error)=>{
+          console.log(error)
+        })
+    }
+    getArtwork();
+  },[art])
 
-  const find = findProduct.find((a)=>{
-    return a.nameProduct === nameProduct
-  })
 
   return (
     <StyledProduct>
@@ -26,7 +36,7 @@ const Product = () => {
       <section className="product">
         <div className="product__image-container">
           <img
-            src={find.imgProdut}
+            src={artwork.image}
             alt="image-product"
             className="product__image"
           />
@@ -36,24 +46,24 @@ const Product = () => {
 
         <div className="product__info-container">
           
-          <p className="product__name">{find.nameProduct}</p>
-          <p className="product__artist">{find.artist}</p>
+          <p className="product__name">{artwork.artworkName}</p>
+          <p className="product__artist">{artwork.artworkArtist}</p>
 
     
           <p className="product__size">
             <span className="bold">Dimensions: </span>
-            {find.dimensions}
+            {artwork.artworkDimensions}
           </p>
           <p className="product__materials">
             <span className="bold">Materials: </span>
-            {find.materials}
+            {artwork.artworkMaterials}
           </p>
           <p className="product__description">
             <span className="bold">Description: </span>
-            {find.description}
+            {artwork.artworkDescription}
           </p>
 
-          <p className="product__price">Price: {find.Price + "$"}</p>
+          <p className="product__price">Price: {artwork.artworkPrice + "$"}</p>
 
         </div>
 
@@ -61,26 +71,26 @@ const Product = () => {
 
         <div className="product__info-desktop-one">
           
-          <p className="product__name">{find.nameProduct}</p>
+          <p className="product__name">{artwork.artworkName}</p>
 
-          <p className="product__artist">{find.artist}</p>
+          <p className="product__artist">{artwork.artworkArtist}</p>
 
-          <p className="product__price">Price: {find.Price + "$"}</p>
+          <p className="product__price">Price: {artwork.artworkPrice + "$"}</p>
 
           </div>
 
           <div className="product__info-desktop-two">
           <p className="product__size">
             <span className="bold">Dimensions: </span>
-            {find.dimensions}
+            {artwork.artworkDimensions}
           </p>
           <p className="product__materials">
             <span className="bold">Materials: </span>
-            {find.materials}
+            {artwork.artworkMaterials}
           </p>
           <p className="product__description">
             <span className="bold">Description: </span>
-            {find.description}
+            {artwork.artworkDescription}
           </p>
           </div>
 

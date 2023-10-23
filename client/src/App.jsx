@@ -15,29 +15,16 @@ import UserCart from './components/pages/user-cart/user-cart'
 import UserOrder from './components/pages/user-order/user-order'
 import Register from './components/pages/user-register/register'
 import Orders from './components/pages/orders/orders'
+import RoutesApp from './routes/router'
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 
 
 
 function App() {
   return (
-    <>
-  <Home /> 
-  <AboutUs /> 
-  <ArtistPage /> 
-  <Category /> 
-  <Dashboard /> 
-  <AddArtistForm /> 
-  <AddArtwork /> 
-  <GalleryArtist />
-  <LoginAdmin />  
-  <LoginUser />
-  <Product />
-  <Profile />
-  <UserCart />
-  <UserOrder /> 
-  <Register /> 
-  <Orders /> 
-    </>
+    <BrowserRouter basename="/react-marketplace">
+      <RoutesApp />
+    </BrowserRouter>
   )
 }
 

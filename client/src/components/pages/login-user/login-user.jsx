@@ -3,6 +3,7 @@ import ButtonSmall from "../../atoms/buttons/button-small";
 import Footer from "../../templates/footer-user/footer";
 import Header from "../../templates/header-user/header";
 import StyledLoginUser from "./styled-login-user";
+import { Link } from 'react-router-dom';
 
 const LoginUser = () => {
   return (
@@ -31,8 +32,14 @@ const LoginUser = () => {
           </div>
 
           <div className="form__container--buttons">
+            <Link to='/profile'>
             <ButtonSmall text={"LOGIN"} color={"black"} width={"15rem"} />
+            </Link>
+
+            <Link to='/register'>
             <ButtonSmall text={"REGISTER"} color={"black"} width={"15rem"} />
+            </Link>
+
           </div>
         </form>
       </section>

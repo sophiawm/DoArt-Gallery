@@ -1,35 +1,50 @@
-import { } from "react";
-import { dataDoArt } from "../../../../data";
+import { useEffect, useState } from "react";
 import StyledCard from "./styledCard";
+import { Link } from 'react-router-dom';
 
 
-export const AllArtistProducts = dataDoArt.flatMap((a) => a.products);
 
 
+export const CardProducts = ({mapear}) => {
 
-export const CardProducts = ({map}) => {
+  const [artwork, setArtwork] = useState([]);
 
+  useEffect(()=>{
+    const getArtwork=()=>{
+      fetch('http://localhost:3002/artwork')
+        .then((res)=>{
+          return res.json()
+        })
+        .then((res)=>{
+          setArtwork(res)
+        })
+        .catch((error)=>{
+          console.log(error)
+        })
+    }
+    getArtwork();
+  },[])
 
   return (
     <StyledCard>
       <div>
         <ul className="cards__container">
-          {map.map((b) => (
+          {mapear.map((b) => (
             <li key={b} className="card">
-              <div className="card__image-container">
-                <img src={b.imgProdut} className="card__image" />
-              </div>
+              <Link to={`/product/${b.artworkName}`}>
+                <div className="card__image-container">
+                  <img src={b.image} className="card__image" />
+                </div>
 
-              <p className="card__title">{b.nameProduct}</p>
-
-              <p className="card__artist">{b.artist}</p>
-
-              <p className="card__price">{b.Price + "$"}</p>
-              <img
-                src="src/assets/icons/heart-icon.svg"
-                alt="icon__heart"
-                className="card__icon"
-              />
+                <p className="card__title">{b.artworkName}</p>
+                <p className="card__artist">{b.artworkArtist}</p>
+                <p className="card__price">{b.artworkPrice + "$"}</p>
+                <img
+                  src="src/assets/icons/heart-icon.svg"
+                  alt="icon__heart"
+                  className="card__icon"
+                />
+              </Link>
             </li>
           ))}
         </ul>

@@ -1,29 +1,43 @@
-import { } from 'react';
-import { dataDoArt } from '../../../../data';
+import { useEffect, useState } from 'react';
 import StyledCardArtistPage from './styled-artist-page';
 
 
-// eslint-disable-next-line react/prop-types
-const CardArtistPage = ({artistName})=>{
+const CardArtistPage = ()=>{
+
+    const [artist, setArtist] = useState([]);
+
+    useEffect(()=>{
+        const getArtist=()=>{
+            fetch('http://localhost:3002/artist')
+                .then((res)=>{
+                    return res.json()
+                })
+                .then((res)=>{
+                    setArtist(res.find((a)=>{
+                        return a.artistName === 'Yinka Shonibare'
+                    }))
+                    console.log(res)
+                })
+                .catch((error)=>{
+                    console.log(error)
+                })
+        }
+        getArtist();
+    },[])
 
 
 
-    const nameArtist = dataDoArt.find((a)=>{
-        return a.artist === artistName
-    })
-
-    console.log(nameArtist)
 
     return(
         <StyledCardArtistPage>
             <section className='card-artist-page'>
-                    <h1 className='artist__name'>{nameArtist.artist}</h1>
+                    <h1 className='artist__name'>{artist.artistName}</h1>
                     <div className='artist__image-container'>
-                        <img src={nameArtist.imgArtist} alt="image-artist" className='artist__image'/>
+                        <img src={artist.artistImage} alt="image-artist" className='artist__image'/>
                     </div>
-                    <p className='artist__type'>{nameArtist.typeArt}</p>
-                    <p className='artist__biography'>{nameArtist.biography}</p>
-                    <p className='artist__categories'><span className='bold'>Categries: </span>{nameArtist.categories}</p>
+                    <p className='artist__type'>{artist.artistTypeArt}</p>
+                    <p className='artist__biography'>{artist.artistDescription}</p>
+                    <p className='artist__categories'><span className='bold'>Categories: </span>{artist.artistCategory}</p>
             </section>
         </StyledCardArtistPage>
     )

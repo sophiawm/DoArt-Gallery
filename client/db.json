@@ -1,0 +1,170 @@
+{
+  "artist": [
+    {
+      "artistImage": {
+        "0": {}
+      },
+      "artistName": "Yinka Shonibare",
+      "artistDescription": "Yinka Shonibare CBE, RA, is a British-Nigerian artist living in the United Kingdom. His work explores cultural identity, colonialism and postcolonialism in the contemporary context of globalization. A hallmark of his art is the brightly colored Ankara fabric he uses.",
+      "artistCategory": "Paintings",
+      "artistTypeArt": "Visual Artist",
+      "id": 1
+    },
+    {
+      "artistImage": {
+        "0": {}
+      },
+      "artistName": "Carrie Mae Weems",
+      "artistDescription": "Steeped in African American history, Carrie Mae Weems makes alternately searing and tender photographs and videos that explore race, family, class, and gender identity. \nThe artist, who has also worked in verse and performance, embraces activism throughout all her work—in particular, she looks to history in order to better understand the present.",
+      "artistCategory": "Paintings",
+      "artistTypeArt": "Visual Artist",
+      "id": 2
+    },
+    {
+      "artistImage": {
+        "0": {}
+      },
+      "artistName": "Barbara Kruger",
+      "artistDescription": "Barbara Kruger is an American conceptual artist. Much of his work consists of black and white photographs covered with a declarative caption, white letters on red in thick oblique Futura typography.",
+      "artistCategory": "Paintings",
+      "artistTypeArt": "Visual Artist",
+      "id": 3
+    }
+  ],
+  "artwork": [
+    {
+      "image": {},
+      "artworkName": "Hybrid Sculpture (Terpsichore / Bété-Guro Mask), 2022",
+      "artworkPrice": "2000",
+      "artworkDimensions": "150 × 56 × 44.5 cm",
+      "artworkMaterials": "",
+      "artworkCategory": "",
+      "artworkArtist": "Yinka Shonibare",
+      "artworkDescription": "lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
+      "id": 1
+    },
+    {
+      "image": {
+        "0": {}
+      },
+      "artworkName": "Some Said You Were the Spitting Image of Evil, 1995-1996",
+      "artworkPrice": "500",
+      "artworkDimensions": "20x20x20",
+      "artworkMaterials": "Photolithograph on paper shopping bag",
+      "artworkCategory": "Sculpture",
+      "artworkArtist": "Barbara Kruger",
+      "id": 2
+    },
+    {
+      "image": {
+        "0": {}
+      },
+      "artworkName": "Lewitt's Wall, 2003-2005",
+      "artworkPrice": "3000",
+      "artworkDimensions": "20x20x20",
+      "artworkMaterials": "Photolithograph on paper shopping bag",
+      "artworkCategory": "Sculpture",
+      "artworkArtist": "Carrie Mae Weems",
+      "id": 3
+    },
+    {
+      "image": {
+        "0": {}
+      },
+      "artworkName": "Hybrid Mask II (K’peliye’e), 2021",
+      "artworkPrice": "2000",
+      "artworkDimensions": "20x20x20",
+      "artworkMaterials": "Photolithograph on paper shopping bag",
+      "artworkCategory": "Sculpture",
+      "artworkArtist": "Barbara Kruger",
+      "id": 4
+    },
+    {
+      "image": {
+        "0": {}
+      },
+      "artworkName": "Hybrid Mask II (K’peliye’e), 2021",
+      "artworkPrice": "2000",
+      "artworkDimensions": "20x20x20",
+      "artworkMaterials": "Photolithograph on paper shopping bag",
+      "artworkCategory": "Sculpture",
+      "artworkArtist": "Barbara Kruger",
+      "id": 5
+    },
+    {
+      "image": {
+        "0": {}
+      },
+      "artworkName": "I Shop Therefore I Am, 1990",
+      "artworkPrice": "10000",
+      "artworkDimensions": "20x20x20",
+      "artworkMaterials": "Photolithograph on paper shopping bag",
+      "artworkCategory": "Sculpture",
+      "artworkArtist": "Barbara Kruger",
+      "id": 6
+    },
+    {
+      "image": {
+        "0": {}
+      },
+      "artworkName": "Hybrid Mask II (K’peliye’e), 2021",
+      "artworkPrice": "70000",
+      "artworkDimensions": "20x20x20",
+      "artworkMaterials": "Photolithograph on paper shopping bag",
+      "artworkCategory": "Photography",
+      "artworkArtist": "Yinka Shonibare",
+      "id": 7
+    },
+    {
+      "image": {
+        "0": {}
+      },
+      "artworkName": "prueba",
+      "artworkPrice": "5000",
+      "artworkDimensions": "20x20x20",
+      "artworkMaterials": "papel",
+      "artworkCategory": "Textiles",
+      "artworkArtist": "Barbara Kruger",
+      "id": 8
+    },
+    {
+      "image": {
+        "0": {}
+      },
+      "artworkName": "prueba2",
+      "artworkPrice": "5000",
+      "artworkDimensions": "20x20x20",
+      "artworkMaterials": "papel",
+      "artworkCategory": "Textiles",
+      "artworkDescription": "loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum",
+      "artworkArtist": "Carrie Mae Weems",
+      "artistDescription": "",
+      "id": 9
+    },
+    {
+      "image": "Weems-Lewitts-2002.png",
+      "artworkName": "prueba de imagen",
+      "artworkPrice": "5000",
+      "artworkDimensions": "20x20x20",
+      "artworkMaterials": "material",
+      "artworkCategory": "Collage",
+      "artworkDescription": "loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum",
+      "artworkArtist": "Barbara Kruger",
+      "id": 10
+    }
+  ],
+  "users": [],
+  "categories": [
+    "Paintings",
+    "Textiles",
+    "Collage",
+    "Sculpture",
+    "Mixed-media",
+    "Photography"
+  ],
+  "typeArt": [
+    "Visual Artist",
+    "Conceptual Artist",
+    "Multidisciplinary Artist"
+  ]
+}

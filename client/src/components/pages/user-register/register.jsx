@@ -3,6 +3,7 @@ import ButtonSmall from "../../atoms/buttons/button-small";
 import Footer from "../../templates/footer-user/footer";
 import Header from "../../templates/header-user/header";
 import StyledRegister from "./styled-register";
+import { Link } from 'react-router-dom';
 
 
 const Register = () => {
@@ -35,12 +36,13 @@ const Register = () => {
                 </div>
               </label>
             </div>
-
+          <Link to='/'>
           <ButtonSmall
             text={"CREATE ACCOUNT"}
             color={"black"}
             width={"15rem"}
           />
+          </Link>
         </form>
       </section>
       <Footer />

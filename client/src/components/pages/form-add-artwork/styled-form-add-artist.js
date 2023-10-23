@@ -121,6 +121,26 @@ const StyledFormAddArtist = styled.div`
         width: 100%;
       }
 
+      label {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        font-size: 1rem;
+        font-weight: bold;
+        gap: 0.4rem;
+      }
+    
+      #form__input-textarea {
+        height: 7rem;
+        width: 100%;
+        border: solid black 0.1rem;
+        border-radius: 0.2rem;
+        resize: vertical;
+        overflow-y: auto;
+      }
+
 
     @media screen and (min-width: 391px){
         .form__add-artist{

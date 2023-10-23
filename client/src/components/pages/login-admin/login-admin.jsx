@@ -3,6 +3,7 @@ import ButtonSmall from "../../atoms/buttons/button-small";
 import FooterAdmin from "../../templates/footer-admin/footer";
 import HeaderLoginAdmin from "../../templates/header-admin copy/header";
 import StyledLoginAdmin from "./styled-loginAdmin";
+import { Link } from 'react-router-dom';
 
 
 const LoginAdmin = () => {
@@ -38,8 +39,9 @@ const LoginAdmin = () => {
             
 
           </div>
-
+          <Link to='/dashboard'>
           <ButtonSmall text={"LOGIN"} color={"black"} width={"15rem"} />
+          </Link>
         </form>
       </section>
       <FooterAdmin />

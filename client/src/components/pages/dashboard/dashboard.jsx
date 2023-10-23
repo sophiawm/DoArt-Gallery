@@ -3,6 +3,8 @@ import StyledDashboard from './styledDashBorad';
 import { dashboardArtist } from './dashboardArtist';
 import FooterAdmin from '../../templates/footer-admin/footer';
 import HeaderAdmin from '../../templates/header-admin/header';
+import { Link } from 'react-router-dom';
+
 
 const Dashboard = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -73,8 +75,13 @@ const Dashboard = () => {
           </ul>
         </div>
         <div className='dashboard__button--container'>
+          <Link to='/artist-form'>
           <button className='dashboard__button'>ADD ARTIST</button>
+          </Link>
+
+          <Link to='/artwork-form'>
           <button className='dashboard__button'>ADD ARTWORK</button>
+          </Link>
         </div>
       </section>
       <FooterAdmin />

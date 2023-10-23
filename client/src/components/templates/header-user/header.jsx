@@ -1,5 +1,6 @@
 import { useRef, } from 'react';
 import StyledHeader from './styled-header';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -69,10 +70,14 @@ const Header = () => {
 
   return (
     <StyledHeader>
+      
       <header className='header'>
+      <Link to='/'>
         <div className='logo-container' >
           <img src="src/assets/pages/logo-DoArt.svg" alt="logo" />
         </div>
+      </Link>
+   
         <div className='icons-container'>
           <img src="src/assets/icons/notification-icon.svg" alt="notification-icon" className='icons-container__notification' />
           <img src="src/assets/icons/shopping-cart-icon.svg" alt="shopping-cart-icon" className='icons-container__shopping-cart' />
@@ -95,7 +100,7 @@ const Header = () => {
                 <li>Collage</li>
                 <li>Mixed-media</li>
             </ul>
-          <p className='dropdown__About-Us'>About Us</p>
+          <Link className='dropdown__About-Us' to='/about-us'>About Us</Link>
           <p className='dropdown__Your-Profile'>Your Profile</p>
         </div>
         <div className='dropdown__image-container'>
@@ -106,20 +111,33 @@ const Header = () => {
 
       {/* version desktop */}
       <header className='header-desktop'>
+        <Link to='/'>
       <img src="src/assets/pages/logo-DoArt.svg" alt="logo" className='header__logo'/>
-
+      </Link>
         <div className='header__container'>
 
           <div className='container-categories'>
 
           <p className='header__categories'>Categories</p>
           <ul className='categories__container-desktop' ref={containerCategoriesRefDesktop}>
+            <Link to='/category'>
             <li>Paintings</li>
+            </Link>
+            <Link to='/category'>
             <li>Textiles</li>
+            </Link>
+            <Link to='/category'>
             <li>Sculpture</li>
+            </Link>
+            <Link to='/category'>
             <li>Photography</li>
+            </Link>
+            <Link to='/category'>
             <li>Collage</li>
+            </Link>
+            <Link to='/category'>
             <li>Mixed-media</li>
+            </Link>
           </ul>
             <img src="src/assets/icons/arrow-icon.svg" alt="" className='categories__icon' onClick={changeDesktop} ref={iconArrowRef}/>
 
@@ -128,17 +146,22 @@ const Header = () => {
 
           </div>
           
-          <p className='header__about-us'>About Us</p>
+          <Link to='/about-us' className='header__about-us'>About Us</Link>
 
-          <p className='header__my-profile'>My Profile</p>
+          <Link to='/login-user' className='header__my-profile'>My Profile</Link>
+
+          <Link to='/gallery-artist' className='header__my-profile'>Our artist</Link>
 
         
 
         
         <div className='header__icons-container'>
+          <Link to='/'>
           <img src="src/assets/icons/notification-icon.svg" alt="notification-icon" className='header__notification-icon'/>
-
+          </Link>
+          <Link to='/shopping-cart'>
           <img src="src/assets/icons/shopping-cart-icon.svg" alt="shopping-icon" className='header__shopping-icon'/>
+          </Link>
         </div>
         </div>
       </header>

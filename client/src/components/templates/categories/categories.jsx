@@ -1,5 +1,7 @@
 import {} from "react";
 import StyledCategories from "./styledCategories";
+import { Link } from 'react-router-dom';
+
 
 export const categories = [
   "Paintings",
@@ -18,9 +20,11 @@ const Categories = () => {
 
         {categories.map((a) => {
           return (
-            <button key={a} className="categories__button">
+            <Link key={a} to='/category'>
+            <button className="categories__button">
               {a}
             </button>
+            </Link>
           );
         })}
       </section>

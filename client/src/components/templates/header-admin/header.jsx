@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import StyledHeaderAdmin from './styled-header';
+import { Link } from 'react-router-dom';
 
 
 
@@ -48,9 +49,11 @@ const HeaderAdmin = () => {
   return (
     <StyledHeaderAdmin>
       <header className='header'>
+        <Link to='/'>
         <div className='logo-container' >
           <img src="src/assets/pages/logo-DoArt.svg" alt="logo" />
         </div>
+        </Link>
         <div className='icons-container'>
           <img src="src/assets/icons/notification-icon.svg" alt="notification-icon" className='icons-container__notification' />
           <img src="src/assets/icons/shopping-cart-icon.svg" alt="shopping-cart-icon" className='icons-container__shopping-cart' />
@@ -84,14 +87,17 @@ const HeaderAdmin = () => {
 
       {/* version desktop */}
       <header className='header-desktop'>
+      <Link to='/'>
       <img src="src/assets/pages/logo-DoArt.svg" alt="logo" className='header__logo'/>
+      </Link>
 
         <div className='header__container'>
-          
+          <Link to='/dashboard'>
           <p className='header__about-us'>Dashboard</p>
-
+          </Link>
+          <Link to='/orders'>
           <p className='header__my-profile'>Orders</p>
-
+          </Link>
         
 
 
