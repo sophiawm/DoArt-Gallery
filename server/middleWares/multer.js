@@ -1,9 +1,9 @@
 
-/*import multer from 'multer';
+import multer from 'multer';
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, '../public/images');
+    cb(null, '../client/public/images');
   },
   filename: (req, file, cb) => {
     const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ 
   storage: storage,
-  limits: { fileSize: '1000000' },
+  limits: { fileSize: '3000000' },
   fileFilter: (req, file, cb) => {
       const fileTypes = /jpeg|jpg|png|gif|svg/
       const mimeType = fileTypes.test(file.mimetype)  
@@ -22,9 +22,9 @@ const upload = multer({
       if(mimeType && extname) {
           return cb(null, true)
       }
-      cb('Give proper files formate to upload')
+      cb('Upload correct format to upload')
   }
-}).single('image');
+}).single('image');   //or .array('images', 3)
 
 export default upload;
-*/
+

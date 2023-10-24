@@ -2,10 +2,10 @@ import ProductModel from '../models/ProductModel.js';
 import ArtistModel from '../models/ArtistModel.js';
 
 //to upload images
-import multer from 'multer';
-const path = require('path')
+//import multer from 'multer';
+//const path = require('path')
 
-import upload from '../middleWares/multer.js'
+//import upload from '../middleWares/multer.js'
 
 
 //POST - CREATE OF CRUD
@@ -21,14 +21,14 @@ export const createProduct = async (req, res) => {
         image: req.file.path
         }*/
     try{
-        await ProductModel.create(info)
-        const artist = await ArtistModel.findByPk(req.params.id)
+        await ProductModel.create(req.body)
+        const artist = await ArtistModel.findByPk(req.body.artist_id)
         if (!artist) {
             return res.status(500).json({ message: 'Artist not found' });
         }
-        res.status(200).json({message: "This product has been added successfully!", product})
+        res.status(200).json({message: "This product has been added successfully!"})
     }catch (error){
-        res.status(500).json({message: "Product could not be added, please be sure to complete all fields."})
+        res.status(500).json({message: error.errors/* "Product could not be added, please be sure to complete all fields."*/})
     }
 }
 

@@ -11,7 +11,8 @@ const ArtistModel = db.define("artists", {
         defaultValue: UUIDV4(), // Use UUIDV4() to generate a UUIDv4
         primaryKey: true,
     },
-    artist_name:{type:DataTypes.STRING}, 
+    artist_name:{type:DataTypes.STRING},
+    artist_description:{type:DataTypes.STRING},
     products:{type:DataTypes.STRING}, 
     categories:{type:DataTypes.STRING},
 },{
