@@ -24,7 +24,7 @@ const upload = multer({
       }
       cb('Upload correct format to upload')
   }
-}).single('image');   //of .array('images', 3)
+}).single('image');   //or .array('images', 3)
 
 export default upload;
 

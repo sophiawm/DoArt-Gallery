@@ -5,13 +5,14 @@ USE DoArt;
 CREATE TABLE artists (
     id integer AUTO_INCREMENT PRIMARY KEY,
     artist_name varchar(50) UNIQUE NOT NULL,
+    artist_description varchar(1000) NOT NULL 
     products varchar(500) NOT NULL,
     categories varchar(500) NOT NULL);
 
 select * from artists;
-insert into artists(artist_name, products, categories)
-VALUES ("Julie Balsaux", "Enfaces 2", "Cubism, Watercolor"),
-	("Erik Bonnet", "Stagman", "Painting, Drawing, Anthropomorphisim");
+insert into artists(artist_name, artist_description, products, categories)
+VALUES ("Julie Balsaux", "Watercolor painter", "Enfaces 2", "Cubism, Watercolor"),
+	("Erik Bonnet", "Surrealist painter", "Stagman", "Painting, Drawing, Anthropomorphisim");
 
 ALTER TABLE `artists` MODIFY id CHAR(36);
 
@@ -43,7 +44,7 @@ CREATE TABLE admins (
     id int AUTO_INCREMENT PRIMARY KEY,
     user_name varchar(50) UNIQUE NOT NULL,
     user_email varchar(50) UNIQUE NOT NULL,
-    user_password varchar(50) NOT NULL,
+    user_password varchar(500) NOT NULL,
     roles varchar (100) NOT NULL);
 
 ALTER TABLE `admins` MODIFY id CHAR(36);
@@ -59,7 +60,7 @@ CREATE TABLE customers (
     id int AUTO_INCREMENT PRIMARY KEY,
     user_name varchar(50) UNIQUE NOT NULL,
     user_email varchar(50) UNIQUE NOT NULL,
-    user_password varchar(50) NOT NULL,
+    user_password varchar(500) NOT NULL,
     user_address varchar(500) NOT NULL);
 
 ALTER TABLE `customers` MODIFY id CHAR(36);

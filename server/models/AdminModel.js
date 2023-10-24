@@ -1,6 +1,8 @@
 import db from '../database/db.js';
 import { DataTypes } from 'sequelize';
 import { UUIDV4 } from "sequelize";
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
 
 const AdminModel = db.define("admins", {
     id: {
@@ -15,5 +17,12 @@ const AdminModel = db.define("admins", {
 },{
     timestamps: false
 })
+
+AdminModel.addHook('beforeCreate', async (admin) => {
+    const saltRounds = 10; // higher numbers hash the password harder
+    const hashedPassword = await bcrypt.hash(admin.user_password, saltRounds);
+    admin.user_password = hashedPassword;
+});
+
 
 export default AdminModel;

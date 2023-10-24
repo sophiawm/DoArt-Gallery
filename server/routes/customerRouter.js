@@ -4,6 +4,7 @@ import {getAllCustomers} from "../controllers/CustomerController.js";
 import { getCustomer } from "../controllers/CustomerController.js";
 import { updateCustomer } from "../controllers/CustomerController.js";
 import { deleteCustomer }  from "../controllers/CustomerController.js";
+import { loginCustomer } from "../controllers/CustomerController.js";
 
 const customerRouter = express.Router();
 
@@ -12,5 +13,7 @@ customerRouter.get("/", getAllCustomers);
 customerRouter.get("/:id", getCustomer);
 customerRouter.put("/:id", updateCustomer);
 customerRouter.delete("/:id", deleteCustomer);
+customerRouter.post("/login", loginCustomer);
+
 
 export default customerRouter
