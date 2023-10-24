@@ -13,7 +13,7 @@ const ProductModel = db.define("products", {
     category:{type:DataTypes.STRING},
     price:{type:DataTypes.FLOAT},
     stock:{type:DataTypes.FLOAT}, //should it be integer
-    image:{type:DataTypes.STRING},
+    /*image:{type:DataTypes.STRING},*/
 },{
     timestamps: false
 })
