@@ -115,7 +115,7 @@ const Carousel = () => {
               <p className='carousel__artist'>{a.artistName}</p>
               <p className='carousel__typeArt'>{a.artistCategory}</p>
               <p className='carousel__biography'>{a.artistDescription}</p>
-              <Link to='/artist-page'>
+              <Link to='/react-marketplace/artist-page'>
               <ButtonSmall text={'SEE MORE'} color={'gray'} width={'9rem'} />
               </Link>
             </li>

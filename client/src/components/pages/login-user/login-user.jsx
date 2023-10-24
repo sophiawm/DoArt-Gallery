@@ -32,11 +32,11 @@ const LoginUser = () => {
           </div>
 
           <div className="form__container--buttons">
-            <Link to='/profile'>
+            <Link to='/react-marketplace/profile'>
             <ButtonSmall text={"LOGIN"} color={"black"} width={"15rem"} />
             </Link>
 
-            <Link to='/register'>
+            <Link to='/react-marketplace/register'>
             <ButtonSmall text={"REGISTER"} color={"black"} width={"15rem"} />
             </Link>
 

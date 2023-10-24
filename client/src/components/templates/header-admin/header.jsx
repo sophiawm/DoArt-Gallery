@@ -87,15 +87,15 @@ const HeaderAdmin = () => {
 
       {/* version desktop */}
       <header className='header-desktop'>
-      <Link to='/'>
+      <Link to='/react-marketplace/home'>
       <img src="src/assets/pages/logo-DoArt.svg" alt="logo" className='header__logo'/>
       </Link>
 
         <div className='header__container'>
-          <Link to='/dashboard'>
+          <Link to='/react-marketplace/dashboard'>
           <p className='header__about-us'>Dashboard</p>
           </Link>
-          <Link to='/orders'>
+          <Link to='/react-marketplace/orders'>
           <p className='header__my-profile'>Orders</p>
           </Link>
         

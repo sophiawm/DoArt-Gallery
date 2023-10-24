@@ -4,7 +4,7 @@ import HeaderAdmin from "../../templates/header-admin/header";
 import FooterAdmin from "../../templates/footer-admin/footer";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-
+import { Link } from 'react-router-dom';
 
 const AddArtwork = () => {
 
@@ -151,7 +151,9 @@ const AddArtwork = () => {
 
 
           <div className="form__button">
+            <Link to='/react-marketplace/dashboard'>
             <ButtonSmall text={"SAVE"} color={"black"} width={"20rem"} />
+            </Link>
           </div>
 
         </form>

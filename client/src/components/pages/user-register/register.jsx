@@ -36,7 +36,7 @@ const Register = () => {
                 </div>
               </label>
             </div>
-          <Link to='/'>
+          <Link to='/react-marketplace/home'>
           <ButtonSmall
             text={"CREATE ACCOUNT"}
             color={"black"}

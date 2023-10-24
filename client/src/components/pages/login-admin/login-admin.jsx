@@ -39,7 +39,7 @@ const LoginAdmin = () => {
             
 
           </div>
-          <Link to='/dashboard'>
+          <Link to='/react-marketplace/dashboard'>
           <ButtonSmall text={"LOGIN"} color={"black"} width={"15rem"} />
           </Link>
         </form>

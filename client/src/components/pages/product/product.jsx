@@ -97,9 +97,11 @@ const Product = () => {
 
      
         <div className="buttons__container">
+
           <ButtonSmall text={'ADD FAVOURITE'} color={'gray'} width={'10rem'}/>
           
           <ButtonSmall text={'ADD TO CART'} color={'black'} width={'10rem'}/>
+          
         </div>
       </section>
       <Footer />

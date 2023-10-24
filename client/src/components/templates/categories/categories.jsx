@@ -20,7 +20,7 @@ const Categories = () => {
 
         {categories.map((a) => {
           return (
-            <Link key={a} to='/category'>
+            <Link key={a} to='/react-marketplace/category'>
             <button className="categories__button">
               {a}
             </button>

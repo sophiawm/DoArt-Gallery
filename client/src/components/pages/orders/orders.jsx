@@ -24,7 +24,6 @@ const Orders = () => {
                 <p className="orders__price">{a.price}</p>
                 </div>
                 <p className="orders__status">{a.status}</p>
-                
               </li>
             );
           })}

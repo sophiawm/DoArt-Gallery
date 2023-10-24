@@ -72,7 +72,7 @@ const Header = () => {
     <StyledHeader>
       
       <header className='header'>
-      <Link to='/'>
+      <Link to='/react-marketplace/home'>
         <div className='logo-container' >
           <img src="src/assets/pages/logo-DoArt.svg" alt="logo" />
         </div>
@@ -111,7 +111,7 @@ const Header = () => {
 
       {/* version desktop */}
       <header className='header-desktop'>
-        <Link to='/'>
+        <Link to='/react-marketplace/home'>
       <img src="src/assets/pages/logo-DoArt.svg" alt="logo" className='header__logo'/>
       </Link>
         <div className='header__container'>
@@ -120,22 +120,22 @@ const Header = () => {
 
           <p className='header__categories'>Categories</p>
           <ul className='categories__container-desktop' ref={containerCategoriesRefDesktop}>
-            <Link to='/category'>
+            <Link to='/react-marketplace/category'>
             <li>Paintings</li>
             </Link>
-            <Link to='/category'>
+            <Link to='/react-marketplace/category'>
             <li>Textiles</li>
             </Link>
-            <Link to='/category'>
+            <Link to='/react-marketplace/category'>
             <li>Sculpture</li>
             </Link>
-            <Link to='/category'>
+            <Link to='/react-marketplace/category'>
             <li>Photography</li>
             </Link>
-            <Link to='/category'>
+            <Link to='/react-marketplace/category'>
             <li>Collage</li>
             </Link>
-            <Link to='/category'>
+            <Link to='/react-marketplace/category'>
             <li>Mixed-media</li>
             </Link>
           </ul>
@@ -146,20 +146,20 @@ const Header = () => {
 
           </div>
           
-          <Link to='/about-us' className='header__about-us'>About Us</Link>
+          <Link to='/react-marketplace/about-us' className='header__about-us'>About Us</Link>
 
-          <Link to='/login-user' className='header__my-profile'>My Profile</Link>
+          <Link to='/react-marketplace/login-user' className='header__my-profile'>My Profile</Link>
 
-          <Link to='/gallery-artist' className='header__my-profile'>Our artist</Link>
+          <Link to='/react-marketplace/gallery-artist' className='header__my-profile'>Our artist</Link>
 
         
 
         
         <div className='header__icons-container'>
-          <Link to='/'>
+          <Link to='/react-marketplace/home'>
           <img src="src/assets/icons/notification-icon.svg" alt="notification-icon" className='header__notification-icon'/>
           </Link>
-          <Link to='/shopping-cart'>
+          <Link to='/react-marketplace/shopping-cart'>
           <img src="src/assets/icons/shopping-cart-icon.svg" alt="shopping-icon" className='header__shopping-icon'/>
           </Link>
         </div>

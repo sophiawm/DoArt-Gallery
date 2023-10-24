@@ -48,7 +48,7 @@ const HeaderLoginAdmin = () => {
   return (
     <StyledHeaderLoginAdmin>
       <header className='header'>
-        <Link to='/' >
+        <Link to='/react-marketplace/home' >
         <div className='logo-container' >
           <img src="src/assets/pages/logo-DoArt.svg" alt="logo" />
         </div>
@@ -86,7 +86,7 @@ const HeaderLoginAdmin = () => {
 
       {/* version desktop */}
       <header className='header-desktop'>
-      <Link to='/'>
+      <Link to='/react-marketplace/home'>
       <img src="src/assets/pages/logo-DoArt.svg" alt="logo" className='header__logo'/> 
       </Link>
       </header>

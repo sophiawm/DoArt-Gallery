@@ -30,7 +30,7 @@ const UserCart =()=>{
 
 
             <div className='buttons__container'>
-                <Link to='/'>
+                <Link to='/react-marketplace/home'>
                 <ButtonSmall text={'SHOP MORE'} color={'black'} width={'10rem'}/>
                 </Link>
 

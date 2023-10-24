@@ -6,7 +6,8 @@ import HeaderAdmin from "../../templates/header-admin/header";
 import FooterAdmin from "../../templates/footer-admin/footer";
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
-
+import { Link } from 'react-router-dom'
+ 
 //
 const AddArtistForm = () => {
   //manejo de formularios
@@ -198,7 +199,9 @@ const AddArtistForm = () => {
           </div>
 
           <div className="form__button">
+            <Link to='/react-marketplace/dashboard'>
             <ButtonSmall text={"SAVE"} color={"black"} width={"20rem"} />
+            </Link>
           </div>
         </form>
       </section>

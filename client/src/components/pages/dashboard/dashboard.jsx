@@ -75,11 +75,11 @@ const Dashboard = () => {
           </ul>
         </div>
         <div className='dashboard__button--container'>
-          <Link to='/artist-form'>
+          <Link to='/react-marketplace/artist-form'>
           <button className='dashboard__button'>ADD ARTIST</button>
           </Link>
 
-          <Link to='/artwork-form'>
+          <Link to='/react-marketplace/artwork-form'>
           <button className='dashboard__button'>ADD ARTWORK</button>
           </Link>
         </div>
