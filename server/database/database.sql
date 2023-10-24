@@ -60,7 +60,7 @@ CREATE TABLE customers (
     id int AUTO_INCREMENT PRIMARY KEY,
     user_name varchar(50) UNIQUE NOT NULL,
     user_email varchar(50) UNIQUE NOT NULL,
-    user_password varchar(50) NOT NULL,
+    user_password varchar(500) NOT NULL,
     user_address varchar(500) NOT NULL);
 
 ALTER TABLE `customers` MODIFY id CHAR(36);

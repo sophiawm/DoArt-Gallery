@@ -19,7 +19,7 @@ const AdminModel = db.define("admins", {
 })
 
 AdminModel.addHook('beforeCreate', async (admin) => {
-    const saltRounds = 10; // You can adjust this based on your security needs
+    const saltRounds = 10; // higher numbers hash the password harder
     const hashedPassword = await bcrypt.hash(admin.user_password, saltRounds);
     admin.user_password = hashedPassword;
 });

@@ -1,5 +1,6 @@
 import db from '../database/db.js';
 import { DataTypes , UUIDV4} from 'sequelize';
+import bcrypt from 'bcrypt';
 
 const CustomerModel = db.define("customers", {
     id: {
@@ -14,5 +15,12 @@ const CustomerModel = db.define("customers", {
 },{
     timestamps: false
 })
+
+CustomerModel.addHook('beforeCreate', async (admin) => {
+    const saltRounds = 10; // higher numbers hash the password harder
+    const hashedPassword = await bcrypt.hash(admin.user_password, saltRounds);
+    admin.user_password = hashedPassword;
+});
+
 
 export default CustomerModel;
