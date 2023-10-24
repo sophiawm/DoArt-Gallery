@@ -56,7 +56,7 @@ INSERT into customers(user_name, user_email, user_password, user_address)
 
 [
     {
-    "id": "1",  //original entry, pre-UUID used for database test
+    "id": "1",  --original entry, pre-UUID used for database test
     "user_name": "joBob",
     "user_email": "LoveArt@mail.com",
     "user_password": "goblidygoo", //pre PW hash
@@ -66,11 +66,11 @@ INSERT into customers(user_name, user_email, user_password, user_address)
     "id": "1a18e9c5-9c9d-4296-8ac2-082bc36e79b7",
     "user_name": "Jenny Dnt Xange Urnumber",
     "user_email": "jenny@mail.com",
-    "user_password": "$2b$10$GZUAGQAcrA3t/qXuQbu.QuEQUPqplq64LsPy8gZQzPhFSuVZBcUbi", //8675309
+    "user_password": "$2b$10$GZUAGQAcrA3t/qXuQbu.QuEQUPqplq64LsPy8gZQzPhFSuVZBcUbi", --8675309
     "user_address": "8675309 Allnight Dr."
 },
 {
-    "id": "2", //original entry, pre-UUID used for database test
+    "id": "2", --original entry, pre-UUID used for database test
     "user_name": "janesArt",
     "user_email": "jane@mail.com",
     "user_password": "greenArt1", //prePW hash
@@ -165,17 +165,17 @@ select * from artists;
 
 //PRODUCTS
 
---Not posting or editing at this time
+--INDICATEDS POST Product created successfully, however unable to display products with GET
 
 CREATE TABLE products (
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
-    product_name VARCHAR(50) UNIQUE NOT NULL,
+    product_name VARCHAR(500) UNIQUE NOT NULL,
     artist_id VARCHAR(100) NOT NULL, 
     artist_name VARCHAR(100) NOT NULL,
-    product_size VARCHAR(50),
-    product_materials VARCHAR(100),
+    product_size VARCHAR(500),
+    product_materials VARCHAR(500),
     product_description VARCHAR(1000) NOT NULL,
-    product_category VARCHAR(50),
+    product_category VARCHAR(500),
     price FLOAT NOT NULL,
     stock FLOAT,
     product_image varchar(500) NOT NULL,
@@ -185,78 +185,53 @@ CREATE TABLE products (
 ALTER TABLE `products` MODIFY id CHAR(36);
 ALTER TABLE `products` ADD FOREIGN KEY (`artist_id`) REFERENCES `artists` (`id`) ON DELETE CASCADE;
 
-{
+[
+    {
         "product_name":"Champagne Kid (Sitting), 2013",
         "artist_id": "47641d2c-3192-4513-8196-30f68232869c",
         "artist_name": "Yinka Shonibare",
-        "product_size": "115 * 70 * 82 cm",
+        "product_size": "115 × 70 × 82 cm",
         "product_materials": "Dutch wax printed cotton textile, resin, chair, globe and champagne bottle.",
         "product_description": "This intriguing artwork by Yinka Shonibare, titled 'Champagne Kid (Sitting)' from 2013, combines elements of Dutch wax printed cotton textile, resin, a chair, a globe, and a champagne bottle. Shonibare's fusion of various materials and cultural symbols creates a striking commentary on identity, globalization, and the interplay between different cultures." ,
         "product_category": "Sculpture, Mixed-media",
         "price": 950,
         "stock": 1,
         "product_image": "../images/Shonibare-Champagne-2013.png"
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    {
-        "id": "1",
-        "product_name": "Stagman",
-        "artist_id": 2,
-        "product_description": "Oil painting: an anthropomorphic deer figure",
-        "category": "Oil on Canvas",
-        "price": 1500,
-        "stock": 1
     },
     {
-        "id": "2",
-        "product_name": "Enfaces 2",
-        "artist_id": 1,
-        "product_description": "A haunting take on childhood",
-        "category": "WaterColor, Cubism",
-        "price": 1310,
-        "stock": 1
+        "product_name":"Some Said You Were the Spitting Image of Evil, 1995-1996",
+        "artist_id": "1ad616a1-12fa-4bb2-8417-84b6e3915753",
+        "artist_name": "Carrie Mae Weems",
+        "product_size": "84.5 × 74.3 cm",
+        "product_materials": "Chromogenic print with sandblasted text on glass.",
+        "product_description": "The piece serves as a powerful reflection on the ways in which individuals are often subjected to judgment based on external appearances, urging a deeper understanding of the nuanced layers of human experience.",
+        "product_category": "Collage",
+        "price": 500,
+        "stock": 10,
+        "product_image": "../images/Weems-SomeSaid-1996.png"
     },
     {
-        "id": "8db03341-05df-4e89-b5fd-9e628f2a4895",
-        "product_name": "Slothman 2",
-        "artist_id": 5,
-        "product_description": "A sloth like figure",
-        "category": "WaterColor, Cubism",
-        "price": 1310,
-        "stock": 1
-    },
-    {
-        "id": "d9fef40b-921f-455f-93f9-e9e03613eb6c",
-        "product_name": "Fishman",
-        "artist_id": 5,
-        "product_description": "Oil painting: a fishy anthropomorphic figure",
-        "category": "Oil on Canvas",
-        "price": 1600,
-        "stock": 1
-    },
-    {
-        "id": "ffe343c7-1fde-40c2-929f-9100c9d7dc19",
-        "product_name": "Slothman",
-        "artist_id": 5,
-        "product_description": "A sloth like figure",
-        "category": "WaterColor, Cubism",
-        "price": 1310,
-        "stock": 1
+        "product_name":"In the Mountains of Santiago de Cuba, 2002",
+        "artist_id": "1ad616a1-12fa-4bb2-8417-84b6e3915753",
+        "artist_name": "Carrie Mae Weems",
+        "product_size": "78.7 × 78.7 cm",
+        "product_materials": "Gelatin silver print.",
+        "product_description": "The artwork serves as a visual narrative that invites viewers to immerse themselves in the enchanting scenery and contemplate the profound connection between people and their natural surroundings.",
+        "product_category": "Photography",
+        "price": 230,
+        "stock": 10,
+        "product_image": "../images/Weems-Mountains-2002.png"
     }
 ]
+
+
+
+
+
+
+
+
+
+
+
+
