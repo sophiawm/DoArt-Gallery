@@ -1,9 +1,10 @@
-import express from "express";
+import express from "express"
 import cors from 'cors'
+import fs from 'node:fs'
 import db from "./server/database/db.js"
-import artistRouter from "./server/routes/artistRouter.js";
-import productRouter from "./server/routes/productRouter.js";
-import adminRouter from "./server/routes/adminRouter.js";
+import artistRouter from "./server/routes/artistRouter.js"
+import productRouter from "./server/routes/productRouter.js"
+import adminRouter from "./server/routes/adminRouter.js"
 import customerRouter from "./server/routes/customerRouter.js"
 import orderRouter from "./server/routes/orderRouter.js"
 
@@ -12,6 +13,7 @@ app.get('/', (_req, res) =>{
     res.send('Hello Seller of Wild and Wonderful Art')
 })
 
+// app.use(fs())
 app.use(cors())
 app.use(express.json())
 app.use('/artists', artistRouter)

@@ -90,7 +90,7 @@ export const router = createBrowserRouter([
                 path: '/react-marketplace/blog',
                 element: <Blog />,
                 loader: async () => {
-                    const database = await services.getData('https://jsonplaceholder.typicode.com/posts');
+                    const database = await services.getData('http://localhost:8080/products');
                     return database;
             }
         }

@@ -1,6 +1,37 @@
 import ProductModel from '../models/ProductModel.js';
 import ArtistModel from '../models/ArtistModel.js';
 
+//to upload images
+//import multer from 'multer';
+//const path = require('path')
+
+//import upload from '../middleWares/multer.js'
+
+
+//POST - CREATE OF CRUD
+
+export const createProduct = async (req, res) => {
+    /*let info = {
+        product_name: req.body.product_name,
+        artist_id:req.body.artist_id,
+        product_description: req.body.product_description,
+        category: req.body.category,
+        price: req.body.price,
+        stock: req.body.stock,
+        image: req.file.path
+        }*/
+    try{
+        await ProductModel.create(req.body)
+        const artist = await ArtistModel.findByPk(req.body.artist_id)
+        if (!artist) {
+            return res.status(500).json({ message: 'Artist not found' });
+        }
+        res.status(200).json({message: "This product has been added successfully!"})
+    }catch (error){
+        res.status(500).json({message: error.errors/* "Product could not be added, please be sure to complete all fields."*/})
+    }
+}
+
 // GET - REVIEW OF CRUD
 
 export const getAllProducts = async (_req, res) => {
@@ -13,20 +44,6 @@ export const getAllProducts = async (_req, res) => {
     }
 }
 
-//POST - CREATE OF CRUD
-
-export const createProduct = async (req, res) => {
-    try{
-        await ProductModel.create(req.body)
-        const artist = await ArtistModel.findByPk(req.params.id)
-        if (!artist) {
-            return res.status(500).json({ message: 'Artist not found' });
-        }
-        res.status(200).json({message: "This product has been added successfully!", product})
-    }catch (error){
-        res.status(500).json({message: "Product could not be added, please be sure to complete all fields."})
-    }
-}
 
 //GET ONE PRODUCT - REVIEW OF CRUD
 export const getProduct = async (req, res) => {
