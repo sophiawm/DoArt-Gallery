@@ -10,9 +10,9 @@ const AdminModel = db.define("admins", {
         defaultValue: UUIDV4(), // Use UUIDV4() to generate a UUIDv4
         primaryKey: true,
     },
-    user_name:{type:DataTypes.STRING}, 
-    user_email:{type:DataTypes.STRING}, 
-    user_password:{type:DataTypes.STRING},
+    admin_name:{type:DataTypes.STRING}, 
+    admin_email:{type:DataTypes.STRING}, 
+    admin_password:{type:DataTypes.STRING},
     roles:{type:DataTypes.STRING}, 
 },{
     timestamps: false
@@ -20,8 +20,8 @@ const AdminModel = db.define("admins", {
 
 AdminModel.addHook('beforeCreate', async (admin) => {
     const saltRounds = 10; // higher numbers hash the password harder
-    const hashedPassword = await bcrypt.hash(admin.user_password, saltRounds);
-    admin.user_password = hashedPassword;
+    const hashedPassword = await bcrypt.hash(admin.admin_password, saltRounds);
+    admin.admin_password = hashedPassword;
 });
 
 

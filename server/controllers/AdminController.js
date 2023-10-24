@@ -82,15 +82,15 @@ export const deleteAdmin = async (req, res) => {
 // ADMIN Login Controller
 
 export const loginAdmin = async (req, res) => {
-    const { user_email, user_password } = req.body;
+    const { admin_email, admin_password } = req.body;
     try {
-        const admin = await AdminModel.findOne({ where: { user_email } });
+        const admin = await AdminModel.findOne({ where: { admin_email } });
 
         if (!admin) {
             return res.status(401).json({ message: 'Invalid email or password' });
         }
 
-        const isPasswordValid = await bcrypt.compare(user_password, admin.user_password);
+        const isPasswordValid = await bcrypt.compare(admin_password, admin.admin_password);
 
         if (!isPasswordValid) {
             return res.status(401).json({ message: 'Invalid email or password' });
@@ -98,7 +98,7 @@ export const loginAdmin = async (req, res) => {
 
         const secretKey = process.env.SECRET_KEY;
         console.log("Secret Key:", secretKey)
-        const token = jwt.sign({ id: admin.id, user_email: admin.user_email }, secretKey);
+        const token = jwt.sign({ id: admin.id, admin_email: admin.admin_email }, secretKey);
         res.json({ token });
     } catch (error) {
         console.error(error);

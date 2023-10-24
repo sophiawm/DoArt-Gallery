@@ -12,9 +12,11 @@ const ArtistModel = db.define("artists", {
         primaryKey: true,
     },
     artist_name:{type:DataTypes.STRING},
-    artist_description:{type:DataTypes.STRING},
-    products:{type:DataTypes.STRING}, 
+    artist_image:{type:DataTypes.STRING},
+    artist_type:{type:DataTypes.STRING},
     categories:{type:DataTypes.STRING},
+    biography:{type:DataTypes.STRING}, 
+    products:{type:DataTypes.STRING}, 
 },{
     timestamps: false
 })

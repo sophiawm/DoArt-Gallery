@@ -4,13 +4,19 @@ USE DoArt;
 
 CREATE TABLE artists (
     id integer AUTO_INCREMENT PRIMARY KEY,
-    artist_name varchar(50) UNIQUE NOT NULL,
-    artist_description varchar(1000) NOT NULL 
-    products varchar(500) NOT NULL,
-    categories varchar(500) NOT NULL);
+    artist_name varchar(200) UNIQUE NOT NULL,
+    artist_image varchar(500) NOT NULL,
+    artist_type varchar(200) NOT NULL,
+    categories varchar(500) NOT NULL,
+    biography varchar(1000) NOT NULL,
+    products varchar(500) NOT NULL);
+
+    ALTER TABLE `artists` MODIFY id CHAR(36);
 
 select * from artists;
-insert into artists(artist_name, artist_description, products, categories)
+
+select * from artists;
+insert into artists(artist_name, artist_image, artist_type, categories, biography, products)
 VALUES ("Julie Balsaux", "Watercolor painter", "Enfaces 2", "Cubism, Watercolor"),
 	("Erik Bonnet", "Surrealist painter", "Stagman", "Painting, Drawing, Anthropomorphisim");
 
@@ -20,12 +26,14 @@ ALTER TABLE `artists` MODIFY id CHAR(36);
 CREATE TABLE products (
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
     product_name VARCHAR(50) UNIQUE NOT NULL,
-    artist_id INTEGER NOT NULL, // artist_name VARCHAR(500) NOT NULL
+    artist_id INTEGER NOT NULL, 
+    artist_name VARCHAR(500) NOT NULL,
+    product_size VARCHAR(500) NOT NULL,
     product_description VARCHAR(500) NOT NULL,
-    category VARCHAR(50),
+    product_category VARCHAR(50),
     price FLOAT NOT NULL,
     stock FLOAT,
-    image STRING,
+    product_image STRING,
     createAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updateAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
@@ -66,7 +74,7 @@ CREATE TABLE customers (
 ALTER TABLE `customers` MODIFY id CHAR(36);
 
 select * from customers;
-INSERT into customers(user_name, user_email, user_password, address)
+INSERT into customers(user_name, user_email, user_password, user_address)
 VALUES ("joBob", "LoveArt@mail.com", "goblidygoo", "111 Artway Dr"),
 	    ("janesArt", "jane@mail.com", "greenArt1", "234 AguaVida");
 
