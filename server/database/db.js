@@ -1,7 +1,7 @@
 import {Sequelize} from "sequelize";
 
 
-const db = new Sequelize ('DoArt', USER_DATABASE , DATABASE_PASSWORD, {
+const db = new Sequelize ('DoArt', 'root' , 'ODC1', {
     host: 'localhost',
     dialect:'mysql'
 });
