@@ -1,21 +1,20 @@
 import styled from "styled-components";
 
 const StyledCard = styled.div`
-.cards__container {
-  height: 100%;
-  width: 95%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
-  grid-template-rows: auto;
-  justify-items: center;
-  align-items: center;
-  background-color: #fffcfc;
-  gap: 2rem;
-  list-style: none;
-  box-sizing: border-box;
-  margin: 0 auto;
-}
-
+  .cards__container {
+    height: 100%;
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+    background-color: #fffcfc;
+    gap: 2rem;
+    list-style: none;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
 
   .card {
     width: 10rem;
@@ -27,7 +26,7 @@ const StyledCard = styled.div`
     align-items: center;
   }
 
-  .card__image-container{
+  .card__image-container {
     grid-column: 1 / span 2;
     grid-row: 1;
     width: 10rem;
@@ -44,31 +43,30 @@ const StyledCard = styled.div`
     grid-row: 1;
   }
 
-
   .card__icon {
     height: 2rem;
     width: 1.5rem;
     text-align: center;
-    grid-row: 4; 
+    grid-row: 4;
   }
 
-  .card__price{
+  .card__price {
     grid-row: 4;
     justify-self: start;
   }
 
-  .card__title{
+  .card__title {
     font-weight: bold;
-    grid-column: 1/span 2;
+    grid-column: 1 / span 2;
     justify-self: start;
   }
 
-  .card__artist{
+  .card__artist {
     grid-row: 3;
     justify-self: start;
   }
 
-  @media screen and (min-width: 391px){
+  @media screen and (min-width: 391px) {
     .cards__container {
       height: 100%;
       width: 95%;
@@ -84,7 +82,6 @@ const StyledCard = styled.div`
       margin: 0 auto;
     }
   }
-
-`
+`;
 
 export default StyledCard;

@@ -1,7 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-
-const StyledFooterAdmin = styled.div `
+const StyledFooterAdmin = styled.div`
     .footer{
         width: 100vw;
         height: 25vh;
@@ -30,6 +29,6 @@ const StyledFooterAdmin = styled.div `
 
     }
 
-`
+`;
 
 export default StyledFooterAdmin;

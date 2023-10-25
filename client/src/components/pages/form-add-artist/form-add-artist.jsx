@@ -2,12 +2,10 @@ import ButtonSmall from "../../atoms/buttons/button-small";
 import StyledFormAddArtist from "./styled-form-add-artist";
 import { useRef } from "react";
 import { useState } from "react";
-import HeaderAdmin from "../../templates/header-admin/header";
-import FooterAdmin from "../../templates/footer-admin/footer";
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
-import { Link } from 'react-router-dom'
- 
+import { Link } from "react-router-dom";
+
 //
 const AddArtistForm = () => {
   //manejo de formularios
@@ -35,12 +33,7 @@ const AddArtistForm = () => {
   const [artwork, setArtwork] = useState([]);
   const [typeArt, setTypeArt] = useState([]);
 
-
-
-  
-
   useEffect(() => {
-    
     const getCategories = () => {
       fetch("http://localhost:3002/categories")
         .then((res) => {
@@ -89,7 +82,6 @@ const AddArtistForm = () => {
   const inputText = useRef(null);
   const inputFile = useRef(null);
   const [fileName, setFileName] = useState("");
-  
 
   const text = () => {
     const file = inputFile.current.files[0];
@@ -101,8 +93,6 @@ const AddArtistForm = () => {
 
   return (
     <StyledFormAddArtist>
-      <HeaderAdmin />
-
       <section className="form-add-artist">
         <h1 className="form__title">ADD ARTIST</h1>
 
@@ -112,7 +102,6 @@ const AddArtistForm = () => {
           onSubmit={handleSubmit(getFormData)}
         >
           <div className="form__inputs-columnOne">
-
             <label htmlFor="form__input-file">
               UPLOAD IMAGE
               <div className="form__container--input">
@@ -199,14 +188,12 @@ const AddArtistForm = () => {
           </div>
 
           <div className="form__button">
-            <Link to='/react-marketplace/dashboard'>
-            <ButtonSmall text={"SAVE"} color={"black"} width={"20rem"} />
+            <Link to="/react-marketplace/dashboard">
+              <ButtonSmall text={"SAVE"} color={"black"} width={"20rem"} />
             </Link>
           </div>
         </form>
       </section>
-
-      <FooterAdmin />
     </StyledFormAddArtist>
   );
 };

@@ -1,29 +1,25 @@
 import { useEffect, useState } from "react";
 import StyledCard from "./styledCard";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-
-
-
-export const CardProducts = ({mapear}) => {
-
+export const CardProducts = ({ mapear }) => {
   const [artwork, setArtwork] = useState([]);
 
-  useEffect(()=>{
-    const getArtwork=()=>{
-      fetch('http://localhost:3002/artwork')
-        .then((res)=>{
-          return res.json()
+  useEffect(() => {
+    const getArtwork = () => {
+      fetch("http://localhost:3002/artwork")
+        .then((res) => {
+          return res.json();
         })
-        .then((res)=>{
-          setArtwork(res)
+        .then((res) => {
+          setArtwork(res);
         })
-        .catch((error)=>{
-          console.log(error)
-        })
-    }
+        .catch((error) => {
+          console.log(error);
+        });
+    };
     getArtwork();
-  },[])
+  }, []);
 
   return (
     <StyledCard>

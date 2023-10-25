@@ -27,6 +27,6 @@ const StyledInputTextarea = styled.div`
     resize: vertical;
     overflow-y: auto;
   }
-`
+`;
 
 export default StyledInputTextarea;

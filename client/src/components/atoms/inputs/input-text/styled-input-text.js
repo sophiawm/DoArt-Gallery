@@ -25,6 +25,6 @@ const StyledInputText = styled.div`
     border: none;
     border-radius: 0.2rem;
   }
-`
+`;
 
 export default StyledInputText;

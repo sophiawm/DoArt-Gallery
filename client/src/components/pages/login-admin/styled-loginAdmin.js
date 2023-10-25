@@ -1,7 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-
-const StyledLoginAdmin = styled.div `
+const StyledLoginAdmin = styled.div`
 
     .form{
         height: 80vh;
@@ -91,6 +90,6 @@ const StyledLoginAdmin = styled.div `
 
         }
 
-`
+`;
 
 export default StyledLoginAdmin;

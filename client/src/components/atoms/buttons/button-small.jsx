@@ -1,8 +1,6 @@
-import { } from 'react';
-import StyledButtonSmall from './styled-button-small';
+import StyledButtonSmall from "./styled-button-small";
 
-// eslint-disable-next-line react/prop-types
-const ButtonSmall = ({ text, width, color })=>{
+const ButtonSmall = ({ text, width, color }) => {
   const buttonStyle = {
     width: width,
     backgroundColor: color,

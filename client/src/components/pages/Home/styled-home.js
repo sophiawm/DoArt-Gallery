@@ -1,20 +1,15 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-
-const StyledHome = styled.main `
-
-.home{
+const StyledHome = styled.main`
+  .home {
     height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 3rem;
-}
+  }
 
-
-
-
-.image__container {
+  .image__container {
     background-image: url(src/assets/pages/main-banner.svg);
     background-size: cover;
     background-position: center;
@@ -27,40 +22,35 @@ const StyledHome = styled.main `
     align-items: center;
     gap: 2rem;
 
-    .image__title{
-        color: white;
-        font-size: 2rem;
-        text-align: center;
-        width: 70%;
+    .image__title {
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+      width: 70%;
     }
 
-    .image__text{
-        color: white;
-        font-size: 2rem;
-        text-align: center;
+    .image__text {
+      color: white;
+      font-size: 2rem;
+      text-align: center;
     }
 
     .image__button {
-        height: 5rem;
-        width: 18rem;
-        color: white;
-        border-radius: 3rem;
-        background-color: black;
-        font-weight: bold; 
-        font-size: 1.5rem;
-        padding: 1rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      height: 5rem;
+      width: 18rem;
+      color: white;
+      border-radius: 3rem;
+      background-color: black;
+      font-weight: bold;
+      font-size: 1.5rem;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-}
+  }
 
-
-
-
-
-
-.main {
+  .main {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -68,40 +58,36 @@ const StyledHome = styled.main `
     gap: 2rem;
     justify-content: center;
     margin: 0 auto;
-    &__title{
-        text-align: center;
-        font-size: 3rem;
-        font-weight: 200;
+    &__title {
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 200;
     }
-}
+  }
 
-.carousel{
-    &__title{
-        text-align: center;
-        font-size: 3rem;
-        font-weight: 200;
+  .carousel {
+    &__title {
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 200;
     }
-}
+  }
 
-.categories{
-    &__section{
-
+  .categories {
+    &__section {
     }
-}
-@media screen and (min-width: 391px){
-    .carousel__title{
-        font-size: 2rem;
-        margin: 2rem auto;
-        font-weight: 400;
+  }
+  @media screen and (min-width: 391px) {
+    .carousel__title {
+      font-size: 2rem;
+      margin: 2rem auto;
+      font-weight: 400;
     }
 
-    .main__title{
-        width: 100%;
-
+    .main__title {
+      width: 100%;
     }
-}
-
-
-`
+  }
+`;
 
 export default StyledHome;

@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 const StyledInputSelect = styled.div`
-
-
   .form__container--input {
     border: solid black 0.1rem;
     border-radius: 0.3rem;
@@ -10,12 +8,10 @@ const StyledInputSelect = styled.div`
     height: 2rem;
   }
 
-
-  
-  #form__input-select{
+  #form__input-select {
     height: 100%;
     width: 100%;
-    border: none; 
+    border: none;
   }
 
   label {

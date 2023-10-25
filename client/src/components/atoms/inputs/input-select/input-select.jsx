@@ -1,12 +1,10 @@
 import {} from "react";
 import StyledInputSelect from "./styled-input-select";
 
-// eslint-disable-next-line react/prop-types
-const InputSelect = ({title, gap, map}) => {
-
+const InputSelect = ({ title, gap, map }) => {
   const styleGap = {
     gap: `${gap}rem`,
-}
+  };
   return (
     <StyledInputSelect>
       <label htmlFor="" style={styleGap}>

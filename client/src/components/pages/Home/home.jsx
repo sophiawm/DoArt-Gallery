@@ -3,13 +3,8 @@ import StyledHome from "./styled-home";
 import CardProducts from "../../molecules/cards/card-products/card-products";
 import Carousel from "../../templates/carousel/carouselImg";
 import Categories from "../../templates/categories/categories";
-import Header from "../../templates/header-user/header";
-import Footer from "../../templates/footer-user/footer";
-
-
 
 const Home = () => {
-
   const [artwork, setArtwork] = useState([]);
 
   useEffect(() => {
@@ -28,11 +23,8 @@ const Home = () => {
     getArtwork();
   }, []);
 
-
   return (
     <StyledHome>
-      <Header />
-
       <main className="home">
         <div className="image__container">
           <h1 className="image__title">
@@ -42,9 +34,11 @@ const Home = () => {
         </div>
         <section className="main">
           <h1 className="main__title">This week’s collection</h1>
-          <CardProducts mapear={artwork.map((a)=>{
-            return a
-          })} />
+          <CardProducts
+            mapear={artwork.map((a) => {
+              return a;
+            })}
+          />
         </section>
         <section className="carousel__section">
           <h1 className="carousel__title">
@@ -57,8 +51,6 @@ const Home = () => {
           <Categories />
         </section>
       </main>
-
-      <Footer />
     </StyledHome>
   );
 };

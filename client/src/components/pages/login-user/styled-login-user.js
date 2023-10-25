@@ -1,7 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-
-const StyledLoginUser = styled.div `
+const StyledLoginUser = styled.div`
     .form{
         min-height: 80vh;
         max-height: 100%;
@@ -111,6 +110,6 @@ const StyledLoginUser = styled.div `
     }
     
 
-`
+`;
 
 export default StyledLoginUser;

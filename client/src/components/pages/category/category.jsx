@@ -1,11 +1,9 @@
 import { useRef, useState, useEffect } from "react";
 import CardProducts from "../../molecules/cards/card-products/card-products";
-import Footer from "../../templates/footer-user/footer";
-import Header from "../../templates/header-user/header";
 import StyledCategory from "./styled-category";
 
 const Category = () => {
-  const [searchGet, setSearchGet] = useState(null); 
+  const [searchGet, setSearchGet] = useState(null);
 
   const [artwork, setArtwork] = useState([]);
 
@@ -34,7 +32,6 @@ const Category = () => {
 
   return (
     <StyledCategory>
-      <Header />
       <section className="category">
         <h1 className="category__title">MIXED-MEDIA</h1>
 
@@ -58,8 +55,6 @@ const Category = () => {
             return a;
           })}
         />
-
-        <Footer />
       </section>
     </StyledCategory>
   );
