@@ -8,12 +8,12 @@ DoArt aims to connect art lovers with stunning pieces but also serves as a platf
 The DoArt Gallery website is a project and accessible through forking the project and installing the database. Explore our collection of breathtaking artworks and discover the world of art with us.
 
 ## Features
-— Artist Profiles: Each artist featured on DoArt has a dedicated profile page. These profiles showcase the artist's biography, portfolio, and a collection of their available works for purchase. Artists can share their inspirations, techniques, and stories behind their creations, fostering a deeper connection between creators and buyers.
-— Artwork Listings: The website provides detailed listings for each piece of art, including high-quality images, dimensions, medium, and pricing information. Users can easily filter and sort artworks by artist, style, price, and more, making it effortless to find the perfect piece.
-— Artwork Purchase: DoArt offers a seamless and secure online purchasing experience. Buyers can add items to their cart, securely checkout using various payment options, and track their order's delivery status. The platform also supports international shipping, allowing art lovers worldwide to access unique pieces.
-— Artist Spotlight: Regularly, DoArt highlights a featured artist, providing them with prominent visibility on the website's homepage and social media channels. This helps emerging talents gain exposure and recognition.
-— Art Authentication and Certification: The authenticity of every artwork is guaranteed, with certificates of authenticity provided for each purchase, ensuring buyers have confidence in their investments.
-— Mobile App: In addition to the website, DoArt offers a mobile app, making it convenient for users to explore and purchase art on the go.
+*  Artist Profiles: Each artist featured on DoArt has a dedicated profile page. These profiles showcase the artist's biography, portfolio, and a collection of their available works for purchase. Artists can share their inspirations, techniques, and stories behind their creations, fostering a deeper connection between creators and buyers.
+* Artwork Listings: The website provides detailed listings for each piece of art, including high-quality images, dimensions, medium, and pricing information. Users can easily filter and sort artworks by artist, style, price, and more, making it effortless to find the perfect piece.
+* Artwork Purchase: DoArt offers a seamless and secure online purchasing experience. Buyers can add items to their cart, securely checkout using various payment options, and track their order's delivery status. The platform also supports international shipping, allowing art lovers worldwide to access unique pieces.
+* Artist Spotlight: Regularly, DoArt highlights a featured artist, providing them with prominent visibility on the website's homepage and social media channels. This helps emerging talents gain exposure and recognition.
+* Art Authentication and Certification: The authenticity of every artwork is guaranteed, with certificates of authenticity provided for each purchase, ensuring buyers have confidence in their investments.
+* Mobile App: In addition to the website, DoArt offers a mobile app, making it convenient for users to explore and purchase art on the go.
 
 ### Built With
 
@@ -24,7 +24,8 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 ## Installation
 — Clone the repository:
-```bash Copy code git clone https://github.com/sophiawm/DoArt-Gallery.git
+```sh
+Copy code git clone https://github.com/sophiawm/DoArt-Gallery.git
 ```
 
 — Install Backend NPM Packages: 
