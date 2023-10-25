@@ -14,6 +14,9 @@ export const createProduct = async (req, res) => {
     /*let info = {
         product_name: req.body.product_name,
         artist_id:req.body.artist_id,
+        artist_name:req.body.artist_name,
+        product_size:req.body.product_size,
+        product_materials:req.body.product_materials,
         product_description: req.body.product_description,
         category: req.body.category,
         price: req.body.price,
@@ -21,11 +24,11 @@ export const createProduct = async (req, res) => {
         image: req.file.path
         }*/
     try{
-        /*await ProductModel.create(req.body)
+        await ProductModel.create(req.body)
         const artist = await ArtistModel.findByPk(req.body.artist_id)
         if (!artist) {
             return res.status(500).json({ message: 'Artist not found' });
-        }*/
+        }
         res.status(200).json({message: "This product has been added successfully!"})
     }catch (error){
         res.status(500).json({message: error.errors/* "Product could not be added, please be sure to complete all fields."*/})
@@ -40,7 +43,7 @@ export const getAllProducts = async (_req, res) => {
         res.json(products);
     }catch (error){
         res.status(500).json({
-            message: error.messge})
+            message: error})
     }
 }
 

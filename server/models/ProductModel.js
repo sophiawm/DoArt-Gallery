@@ -11,7 +11,7 @@ const ProductModel = db.define("products", {
     artist_id:{type:DataTypes.INTEGER},
     artist_name:{type:DataTypes.STRING}, 
     product_size:{type:DataTypes.STRING},
-    product_material:{type:DataTypes.STRING},
+    product_materials:{type:DataTypes.STRING},
     product_description:{type:DataTypes.STRING}, 
     product_category:{type:DataTypes.STRING},
     price:{type:DataTypes.FLOAT},
