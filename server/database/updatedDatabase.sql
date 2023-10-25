@@ -3,9 +3,9 @@
 --ADMINS
 CREATE TABLE admins (
     id int AUTO_INCREMENT PRIMARY KEY,
-    user_name varchar(50) UNIQUE NOT NULL,
-    user_email varchar(50) UNIQUE NOT NULL,
-    user_password varchar(500) NOT NULL,
+    admin_name varchar(50) UNIQUE NOT NULL,
+    admin_email varchar(50) UNIQUE NOT NULL,
+    admin_password varchar(500) NOT NULL,
     roles varchar (100) NOT NULL);
 
 ALTER TABLE `admins` MODIFY id CHAR(36);
@@ -178,40 +178,44 @@ CREATE TABLE products (
     product_category VARCHAR(500),
     price FLOAT NOT NULL,
     stock FLOAT,
-    product_image varchar(500) NOT NULL,
+    product_image VARCHAR(500) NOT NULL,
     createAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updateAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 ALTER TABLE `products` MODIFY id CHAR(36);
 ALTER TABLE `products` ADD FOREIGN KEY (`artist_id`) REFERENCES `artists` (`id`) ON DELETE CASCADE;
 
+
 [
     {
-        "product_name":"Champagne Kid (Sitting), 2013",
+        "id": "1d968d0d-04b0-4cf2-a810-b99aafa33da3",
+        "product_name": "Modern Spiritual I, 2023",
         "artist_id": "47641d2c-3192-4513-8196-30f68232869c",
         "artist_name": "Yinka Shonibare",
-        "product_size": "115 × 70 × 82 cm",
-        "product_materials": "Dutch wax printed cotton textile, resin, chair, globe and champagne bottle.",
-        "product_description": "This intriguing artwork by Yinka Shonibare, titled 'Champagne Kid (Sitting)' from 2013, combines elements of Dutch wax printed cotton textile, resin, a chair, a globe, and a champagne bottle. Shonibare's fusion of various materials and cultural symbols creates a striking commentary on identity, globalization, and the interplay between different cultures." ,
-        "product_category": "Sculpture, Mixed-media",
-        "price": 950,
-        "stock": 1,
-        "product_image": "../images/Shonibare-Champagne-2013.png"
-    },
-    {
-        "product_name":"Some Said You Were the Spitting Image of Evil, 1995-1996",
-        "artist_id": "1ad616a1-12fa-4bb2-8417-84b6e3915753",
-        "artist_name": "Carrie Mae Weems",
-        "product_size": "84.5 × 74.3 cm",
-        "product_materials": "Chromogenic print with sandblasted text on glass.",
-        "product_description": "The piece serves as a powerful reflection on the ways in which individuals are often subjected to judgment based on external appearances, urging a deeper understanding of the nuanced layers of human experience.",
-        "product_category": "Collage",
-        "price": 500,
+        "product_size": "124.6 × 100.6 × 0.1 cm",
+        "product_materials": null,
+        "product_description": "Shonibare's adept fusion of materials and cultural symbols in this sculpture serves as a powerful representation of the intersection between diverse cultural narratives and artistic expressions.",
+        "product_category": "Painting, Collage”",
+        "price": 300,
         "stock": 10,
-        "product_image": "../images/Weems-SomeSaid-1996.png"
+        "product_image": "../../../../../server/images/Shonibare-Painting-2023.png"
     },
     {
-        "product_name":"In the Mountains of Santiago de Cuba, 2002",
+        "id": "78cf1b78-e654-417e-9e84-9fed4e3075c6",
+        "product_name": "Hybrid Mask II (K’peliye’e), 2021",
+        "artist_id": "47641d2c-3192-4513-8196-30f68232869c",
+        "artist_name": "Yinka Shonibare",
+        "product_size": "20 × 8 × 8 cm",
+        "product_materials": null,
+        "product_description": "This artwork represents Shonibare's exploration of cultural amalgamation and the complexities of identity. The fusion of materials and the intricately painted mask evoke a sense of cultural hybridity and the interwoven narratives of different traditions.",
+        "product_category": "Sculpture",
+        "price": 295,
+        "stock": 1,
+        "product_image": "../../../../../server/images/Shonibare-Hybrid-2021.png"
+    },
+    {
+        "id": "95d12871-3572-4ac9-b57c-5f33a01146ca",
+        "product_name": "In the Mountains of Santiago de Cuba, 2002",
         "artist_id": "1ad616a1-12fa-4bb2-8417-84b6e3915753",
         "artist_name": "Carrie Mae Weems",
         "product_size": "78.7 × 78.7 cm",
@@ -220,18 +224,85 @@ ALTER TABLE `products` ADD FOREIGN KEY (`artist_id`) REFERENCES `artists` (`id`)
         "product_category": "Photography",
         "price": 230,
         "stock": 10,
-        "product_image": "../images/Weems-Mountains-2002.png"
+        "product_image": "../../../../../server/images/Weems-Mountains-2002.png"
+    },
+    {
+        "id": "a27492a8-6980-4c2d-bc86-322631c59949",
+        "product_name": "Champagne Kid (Sitting), 2013",
+        "artist_id": "47641d2c-3192-4513-8196-30f68232869c",
+        "artist_name": "Yinka Shonibare",
+        "product_size": "115 × 70 × 82 cm",
+        "product_materials": null,
+        "product_description": "This intriguing artwork by Yinka Shonibare, titled 'Champagne Kid (Sitting)' from 2013, combines elements of Dutch wax printed cotton textile, resin, a chair, a globe, and a champagne bottle. Shonibare's fusion of various materials and cultural symbols creates a striking commentary on identity, globalization, and the interplay between different cultures.",
+        "product_category": "Sculpture, Mixed-media",
+        "price": 950,
+        "stock": 1,
+        "product_image": "../images/Shonibare-Champagne-2013.png"
+    },
+    {
+        "id": "c0370a37-858d-4b85-83a9-fd07335a5040",
+        "product_name": "Lewitt's Wall, 2003-2005",
+        "artist_id": "1ad616a1-12fa-4bb2-8417-84b6e3915753",
+        "artist_name": "Carrie Mae Weems",
+        "product_size": "67.9 × 57.8 cm",
+        "product_materials": null,
+        "product_description": "Weems employs her distinctive artistic perspective to capture the essence of architectural structures, potentially drawing inspiration from the minimalist artist Sol Lewitt. Weems's approach to this piece prompts viewers to contemplate the intersection of art, space, and perception.",
+        "product_category": "Photography",
+        "price": 250,
+        "stock": 10,
+        "product_image": "../images/Weems-Lewitts-2002.png"
     }
 ]
 
 
+{
+        "product_name": "I Have Been to Hell and Back Handkerchief (Red), 2009", 
+        "artist_id": "36a47110-b90e-4467-8cb8-658866b99cd5",
+        "artist_name": "Louise Bourgeois",
+        "product_size": "29.2 × 30.5 cm ",
+        "product_materials": "Embroidery on 100% Cotton Handkerchief",
+        "product_description": "The title, 'I Have Been to Hell and Back', hints at a profound and perhaps tumultuous personal journey, and the medium of embroidery suggests a delicate and labor-intensive process to convey the artist's message or experience.",
+        "product_category": "Textile" ,
+        "price": 530,
+        "stock": 1,
+        "product_image": "../../../../../server/images/Bourgeois-Hackerchief-2009.png"
+    }
+
+
+______________________________________________________________________________________
+
+--ORDERS
+
+CREATE TABLE orders(
+	id	integer AUTO_INCREMENT PRIMARY KEY,
+	customer_id	varchar(500) NOT NULL,
+	product_ids	varchar(500) NOT NULL,
+	order_price	FLOAT NOT NULL,
+    order_status varchar(50) NOT NULL,
+	createAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updateAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP);
+    
+ALTER TABLE `orders` MODIFY id CHAR(36);
+ALTER TABLE `orders` ADD FOREIGN KEY (`products`) REFERENCES `products` (`product_name`),
+ADD FOREIGN KEY (`customers`) REFERENCES `customers` (`user_name`) ON DELETE SET NULL;
+    
+select * from orders;
 
 
 
-
-
-
-
-
-
-
+[
+    {
+        "id": "068c40cd-5e31-4fca-86ed-f4b77b4c431e",
+        "customer_id": "1a18e9c5-9c9d-4296-8ac2-082bc36e79b7",
+        "product_ids": "1d968d0d-04b0-4cf2-a810-b99aafa33da3, 78cf1b78-e654-417e-9e84-9fed4e3075c6",
+        "order_price": 595,
+        "order_status": "Processing"
+    },
+    {
+        "id": "6a228f22-025e-4817-9f43-f00b8764f3a0",
+        "customer_id": "1a18e9c5-9c9d-4296-8ac2-082bc36e79b7",
+        "product_ids": "1d968d0d-04b0-4cf2-a810-b99aafa33da3",
+        "order_price": 300,
+        "order_status": "Processing"
+    }
+]

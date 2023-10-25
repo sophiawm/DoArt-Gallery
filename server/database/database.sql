@@ -82,10 +82,10 @@ VALUES ("joBob", "LoveArt@mail.com", "goblidygoo", "111 Artway Dr"),
 
 CREATE TABLE orders(
 	id	integer AUTO_INCREMENT PRIMARY KEY,
-	customer	varchar(50) NOT NULL,
+	customer_id	varchar(50) NOT NULL,
 	product_ids	varchar(500) NOT NULL,
 	quantity	integer NOT NULL,
-	price	FLOAT NOT NULL,
+	order_price	FLOAT NOT NULL,
     order_status varchar(50) NOT NULL,
 	createAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updateAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP);
