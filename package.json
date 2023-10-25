@@ -22,8 +22,7 @@
     "mysql2": "^3.6.1",
     "save": "^2.9.0",
     "sequelize": "^6.33.0",
-    "uuid": "^9.0.1",
-    "vite-test": "^0.4.0"
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "jest": "^29.7.0",

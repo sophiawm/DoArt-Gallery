@@ -18,7 +18,7 @@ app.get('/', (_req, res) =>{
     res.send('Hello Seller of Wild and Wonderful Art')
 })
 
-app.use(fs())
+// app.use(fs())
 app.use(cors())
 app.use(express.json())
 app.use('/artists', artistRouter)
