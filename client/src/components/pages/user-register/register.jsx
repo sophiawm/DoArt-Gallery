@@ -4,6 +4,7 @@ import StyledRegister from "./styled-register";
 import { Link } from "react-router-dom";
 
 const Register = () => {
+
   return (
     <StyledRegister>
       <section className="form">
@@ -13,7 +14,7 @@ const Register = () => {
             <label htmlFor="form__input-name">
               NAME
               <div className="form__container--input">
-                <input type="email" id="form__input-name" />
+                <input type="email" id="form__input-name"/>
               </div>
             </label>
 
